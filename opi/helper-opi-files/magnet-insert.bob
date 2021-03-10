@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>HeVol-Gersemi</name>
+  <macros>
+    <P>Cryo-HeVol</P>
+  </macros>
+  <width>1200</width>
+  <height>1150</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Magnet Insert Foams</text>
+    <x use_class="true">20</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height use_class="true">50</height>
+    <font use_class="true">
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="HEADER-TEXT" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment use_class="true">0</horizontal_alignment>
+    <vertical_alignment use_class="true">1</vertical_alignment>
+    <wrap_words use_class="true">false</wrap_words>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <FILLER>Foam-1</FILLER>
+    </macros>
+    <file>../Embedded/foam.bob</file>
+    <x>20</x>
+    <y>870</y>
+    <height>270</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <FILLER>Foam-2</FILLER>
+    </macros>
+    <file>../Embedded/foam.bob</file>
+    <x>20</x>
+    <y>600</y>
+    <height>270</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <FILLER>Magnet</FILLER>
+    </macros>
+    <file>../Embedded/foam.bob</file>
+    <x>20</x>
+    <y>340</y>
+    <height>270</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_3</name>
+    <macros>
+      <FILLER>Foam-3</FILLER>
+    </macros>
+    <file>../Embedded/foam.bob</file>
+    <x>20</x>
+    <y>50</y>
+    <height>270</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>LHe Volume</text>
+    <x>470</x>
+    <y>550</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P):MagIns:VolLHe-1</pv_name>
+    <x>630</x>
+    <y>550</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Total Volume</text>
+    <x>470</x>
+    <y>520</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P):MagIns:Vol-1</pv_name>
+    <x>630</x>
+    <y>520</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>GHe Volume</text>
+    <x>470</x>
+    <y>580</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P):MagIns:VolGHe-1</pv_name>
+    <x>630</x>
+    <y>580</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>LI680 Simulation</text>
+    <x>470</x>
+    <y>850</y>
+    <width>130</width>
+  </widget>
+  <widget type="checkbox" version="2.0.0">
+    <name>Check Box</name>
+    <pv_name>CstatV-LHe:LI680:sRdV.SIMM</pv_name>
+    <label>SIMM</label>
+    <x>630</x>
+    <y>850</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>CstatV-LHe:LI680:sRdV</pv_name>
+    <x>720</x>
+    <y>850</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>CstatV-LHe:LI680:sRdV.SVAL</pv_name>
+    <x>640</x>
+    <y>880</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>LHe Volume</text>
+    <x>470</x>
+    <y>120</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P):MagIns:VolLHe-2</pv_name>
+    <x>630</x>
+    <y>120</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Total Volume</text>
+    <x>470</x>
+    <y>90</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P):MagIns:Vol-2</pv_name>
+    <x>630</x>
+    <y>90</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>GHe Volume</text>
+    <x>470</x>
+    <y>150</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(P):MagIns:VolGHe-2</pv_name>
+    <x>630</x>
+    <y>150</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>LHe Temperature</text>
+    <x>470</x>
+    <y>630</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>CstatV-LHe:TT663M:sRdV</pv_name>
+    <x>630</x>
+    <y>630</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>GHe Temperature</text>
+    <x>470</x>
+    <y>660</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>CstatV-LHe:TT667M:sRdV</pv_name>
+    <x>630</x>
+    <y>660</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Pressure</text>
+    <x>470</x>
+    <y>700</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>CstatV-LHe:PT680:sRdV</pv_name>
+    <x>630</x>
+    <y>700</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>Total He mass</text>
+    <x>470</x>
+    <y>740</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P):MagIns:MassHe-1</pv_name>
+    <x>630</x>
+    <y>740</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>Total LHe mass</text>
+    <x>470</x>
+    <y>770</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(P):MagIns:MassLHe-1</pv_name>
+    <x>630</x>
+    <y>770</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_13</name>
+    <text>Total GHe mass</text>
+    <x>470</x>
+    <y>800</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P):MagIns:MassGHe-1</pv_name>
+    <x>630</x>
+    <y>800</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>LHe Temperature</text>
+    <x>470</x>
+    <y>190</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_13</name>
+    <pv_name>CstatV-LHe:TT668M:sRdV</pv_name>
+    <x>630</x>
+    <y>190</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>GHe Temperature</text>
+    <x>470</x>
+    <y>220</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_14</name>
+    <pv_name>CstatV-LHe:TT669M:sRdV</pv_name>
+    <x>630</x>
+    <y>220</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>Pressure</text>
+    <x>470</x>
+    <y>260</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_15</name>
+    <pv_name>CstatV-LHe:PT680:sRdV</pv_name>
+    <x>630</x>
+    <y>260</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_17</name>
+    <text>Total He mass</text>
+    <x>470</x>
+    <y>300</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_16</name>
+    <pv_name>$(P):MagIns:MassHe-2</pv_name>
+    <x>630</x>
+    <y>300</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_18</name>
+    <text>Total LHe mass</text>
+    <x>470</x>
+    <y>330</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_17</name>
+    <pv_name>$(P):MagIns:MassLHe-2</pv_name>
+    <x>630</x>
+    <y>330</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>Total GHe mass</text>
+    <x>470</x>
+    <y>360</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_18</name>
+    <pv_name>$(P):MagIns:MassGHe-2</pv_name>
+    <x>630</x>
+    <y>360</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_20</name>
+    <text>LHe Volume</text>
+    <x>810</x>
+    <y>120</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_19</name>
+    <pv_name>$(P):MagIns:VolLHe-3</pv_name>
+    <x>970</x>
+    <y>120</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_21</name>
+    <text>Total Volume</text>
+    <x>810</x>
+    <y>90</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_20</name>
+    <pv_name>$(P):MagIns:Vol-3</pv_name>
+    <x>970</x>
+    <y>90</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_22</name>
+    <text>GHe Volume</text>
+    <x>810</x>
+    <y>150</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_21</name>
+    <pv_name>$(P):MagIns:VolGHe-3</pv_name>
+    <x>970</x>
+    <y>150</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_23</name>
+    <text>LHe Temperature</text>
+    <x>810</x>
+    <y>200</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_22</name>
+    <pv_name>CstatV-LHe:TT671M:sRdV</pv_name>
+    <x>970</x>
+    <y>200</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_24</name>
+    <text>GHe Temperature</text>
+    <x>810</x>
+    <y>230</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_23</name>
+    <pv_name>CstatV-LHe:TT685:sRdV</pv_name>
+    <x>970</x>
+    <y>230</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_25</name>
+    <text>Pressure</text>
+    <x>810</x>
+    <y>270</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_24</name>
+    <pv_name>CstatV-LHe:PT660M:sRdV</pv_name>
+    <x>970</x>
+    <y>270</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_26</name>
+    <text>Total He mass</text>
+    <x>810</x>
+    <y>310</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_25</name>
+    <pv_name>$(P):MagIns:MassHe-3</pv_name>
+    <x>970</x>
+    <y>310</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_27</name>
+    <text>Total LHe mass</text>
+    <x>810</x>
+    <y>340</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_26</name>
+    <pv_name>$(P):MagIns:MassLHe-3</pv_name>
+    <x>970</x>
+    <y>340</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_28</name>
+    <text>Total GHe mass</text>
+    <x>810</x>
+    <y>370</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_27</name>
+    <pv_name>$(P):MagIns:MassGHe-3</pv_name>
+    <x>970</x>
+    <y>370</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  Gersemi Valve Box  </name>
+    <x>789</x>
+    <y>499</y>
+    <width>302</width>
+    <height>342</height>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_29</name>
+      <text>LHe Volume</text>
+      <y>30</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_28</name>
+      <pv_name>$(P):CstatV-VBox:VolLHe</pv_name>
+      <x>160</x>
+      <y>30</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_30</name>
+      <text>Total Volume</text>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_29</name>
+      <pv_name>$(P):CstatV-VBox:Vol</pv_name>
+      <x>160</x>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_31</name>
+      <text>GHe Volume</text>
+      <y>60</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_30</name>
+      <pv_name>$(P):CstatV-VBox:VolGHe</pv_name>
+      <x>160</x>
+      <y>60</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_32</name>
+      <text>LHe Temperature</text>
+      <y>110</y>
+      <width>130</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_31</name>
+      <pv_name>CstatV-LHe:TT613:sRdV</pv_name>
+      <x>160</x>
+      <y>110</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_33</name>
+      <text>GHe Temperature</text>
+      <y>140</y>
+      <width>130</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_32</name>
+      <pv_name>CstatV-LHe:TT603:sRdV</pv_name>
+      <x>160</x>
+      <y>140</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_34</name>
+      <text>Pressure</text>
+      <y>180</y>
+      <width>130</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_33</name>
+      <pv_name>CstatV-LHe:PT600:sRdV</pv_name>
+      <x>160</x>
+      <y>180</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_35</name>
+      <text>Total He mass</text>
+      <y>220</y>
+      <width>130</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_34</name>
+      <pv_name>$(P):CstatV-VBox:MassHe</pv_name>
+      <x>160</x>
+      <y>220</y>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_36</name>
+      <text>Total LHe mass</text>
+      <y>250</y>
+      <width>130</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_35</name>
+      <pv_name>$(P):CstatV-VBox:MassLHe</pv_name>
+      <x>160</x>
+      <y>250</y>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_37</name>
+      <text>Total GHe mass</text>
+      <y>280</y>
+      <width>130</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_36</name>
+      <pv_name>$(P):CstatV-VBox:MassGHe</pv_name>
+      <x>160</x>
+      <y>280</y>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+  </widget>
+</display>

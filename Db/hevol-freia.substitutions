@@ -1,0 +1,12 @@
+file "hevol-gen-freia.db" { pattern
+{P}
+{Cryo-HeVol}
+}
+
+file "foam.template" { pattern
+{P,          FILLER,  LI,    LI_MAX}
+{Cryo-HeVol  Foam-1	      LI680	260}
+{Cryo-HeVol  Foam-2	      LI680	260}
+{Cryo-HeVol  Magnet	      LI680	260}
+{Cryo-HeVol  Foam-3	      LT682	57}
+}

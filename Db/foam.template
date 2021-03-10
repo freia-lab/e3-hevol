@@ -1,0 +1,62 @@
+record (ao, "$(P):$(FILLER):BottomPos") {
+  field(EGU, "cm")
+  field(PREC, 1)
+  field(FLNK, "$(P):$(FILLER):BottomPosPerCnt")
+}
+record (calc, "$(P):$(FILLER):BottomPosPerCnt") {
+  field(EGU, "%")
+  field(PREC, 1)
+  field(INPA, "$(P):$(FILLER):BottomPos")
+  field(INPB, "$(LI_MAX)")
+  field(CALC, "100*A/B")
+}
+
+record (ao, "$(P):$(FILLER):Height") {
+  field(EGU, "cm")
+  field(PREC, 1)
+  field(FLNK, "$(P):$(FILLER):HeightPerCnt")
+}
+record (calc, "$(P):$(FILLER):HeightPerCnt") {
+  field(EGU, "%")
+  field(PREC, 1)
+  field(INPA, "$(P):$(FILLER):Height")
+  field(INPB, "$(LI_MAX)")
+  field(CALC, "100*A/B")
+  field(FLNK, "$(P):$(FILLER):Volume")
+}
+
+record (ao, "$(P):$(FILLER):InnerDiam") {
+  field(EGU, "cm")
+  field(PREC, 1)
+  field(FLNK, "$(P):$(FILLER):Volume")
+}
+record (ao, "$(P):$(FILLER):OuterDiam") {
+  field(EGU, "cm")
+  field(PREC, 1)
+  field(FLNK, "$(P):$(FILLER):Volume")
+}
+
+record (calc, "$(P):$(FILLER):Volume") {
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPA, "$(P):$(FILLER):Height")
+  field(INPB, "$(P):$(FILLER):InnerDiam")
+  field(INPC, "$(P):$(FILLER):OuterDiam")
+  field(INPL, "3.1415926")
+  field(CALC, "(C-B)*(C-B)*A*L/4000000")
+}
+
+# INPA - total volume [m3]
+# INPB - Bottom pos [%] of $(LI)
+# INPC - Height in [%] of $(LI)
+
+record(calc, "$(P):$(FILLER):VolGas") {
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(SCAN, "10 second")
+  field(INPA, "$(P):$(FILLER):Volume")
+  field(INPB, "$(P):$(FILLER):BottomPosPerCnt")
+  field(INPC, "$(P):$(FILLER):HeightPerCnt")
+  field(INPK, "CstatV-LHe:$(LI):sRdV")
+  field(CALC, "K<B?A:(K>=(B+C)?0:A*(B+C-K)/C)")
+}

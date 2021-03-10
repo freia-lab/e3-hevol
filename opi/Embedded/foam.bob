@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>foam</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>$(FILLER)</text>
+    <x use_class="true">20</x>
+    <y use_class="true">0</y>
+    <width>300</width>
+    <height use_class="true">50</height>
+    <font use_class="true">
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="HEADER-TEXT" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment use_class="true">0</horizontal_alignment>
+    <vertical_alignment use_class="true">1</vertical_alignment>
+    <wrap_words use_class="true">false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Bottom Position</text>
+    <y>50</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P):$(FILLER):BottomPosPerCnt</pv_name>
+    <x>260</x>
+    <y>50</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P):$(FILLER):BottomPos</pv_name>
+    <x>150</x>
+    <y>50</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Height</text>
+    <y>80</y>
+    <width>130</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P):$(FILLER):Height</pv_name>
+    <x>150</x>
+    <y>80</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P):$(FILLER):HeightPerCnt</pv_name>
+    <x>260</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Inner Diameter</text>
+    <y>110</y>
+    <width>130</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_2</name>
+    <pv_name>$(P):$(FILLER):InnerDiam</pv_name>
+    <x>150</x>
+    <y>110</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Outer Diameter</text>
+    <y>140</y>
+    <width>130</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_3</name>
+    <pv_name>$(P):$(FILLER):OuterDiam</pv_name>
+    <x>150</x>
+    <y>140</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Total Volume</text>
+    <y>170</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P):$(FILLER):Volume</pv_name>
+    <x>260</x>
+    <y>170</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Volume in gas</text>
+    <y>200</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P):$(FILLER):VolGas</pv_name>
+    <x>260</x>
+    <y>200</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Volume in LHe</text>
+    <y>230</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>=`$(P):$(FILLER):Volume`-`$(P):$(FILLER):VolGas`</pv_name>
+    <x>260</x>
+    <y>230</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+</display>

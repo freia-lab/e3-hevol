@@ -1,0 +1,267 @@
+record (longin, "$(P):ReturnCnt") {
+  field(DESC, "Returned GHe 1 count per 0.1 m3")
+  field (SCAN, "10 second")
+  field (INP, "HeliumVolume:In")
+}
+record (ao, "$(P):MagIns:Vol-1") {
+  field(DESC, "Volume below the lambda plate")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(VAL, "2.649")
+  field(PINI, "YES")
+}
+record (ao, "$(P):MagIns:Vol-2") {
+  field(DESC, "Volume above the lambda plate")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(VAL, "0.607")
+  field(PINI, "YES")
+}
+record (ao, "$(P):MagIns:Vol-3") {
+  field(DESC, "Volume of the heat exchanger")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(VAL, "0.004")
+  field(PINI, "YES")
+}
+
+record (ao, "$(P):CstatV-VBox:Vol") {
+  field(DESC, "Volume of the Gersemi Valve Box")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(VAL, "0.071")
+  field(PINI, "YES")
+}
+
+record (calc, "$(P):MagIns:VolLHe-1") {
+  field(DESC, "LHe volume below lambda plate")
+  field(SCAN, "10 second")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPA, "$(P):Foam-1:VolGas")
+  field(INPB, "$(P):Foam-2:VolGas")
+  field(INPC, "$(P):Magnet:VolGas")
+  field(INPJ, "100.0")
+  field(INPK, "$(P):MagIns:Vol-1")
+  field(INPL, "CstatV-LHe:LI680:sRdV")
+  field(CALC, "L<0?0:(L>=100?K-A-B-C:K*L/J-A-B-C)")
+  field(FLNK, "$(P):MagIns:VolGHe-1")
+}
+
+record (calc, "$(P):MagIns:VolGHe-1") {
+  field(DESC, "GHe volume below lambda plate")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPA, "$(P):MagIns:Vol-1")
+  field(INPB, "$(P):MagIns:VolLHe-1")
+  field(CALC, "A-B")
+}
+
+record (calc, "$(P):MagIns:VolLHe-2") {
+  field(DESC, "LHe volume above lambda plate")
+  field(SCAN, "10 second")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPA, "$(P):Foam-3:VolGas")
+  field(INPJ, "100.0")
+  field(INPK, "$(P):MagIns:Vol-2")
+  field(INPL, "CstatV-LHe:LT682:sRdV")
+  field(CALC, "L<0?0:(L>=100?K-A:K*L/J-A)")
+  field(FLNK, "$(P):MagIns:VolGHe-2")
+}
+
+record (calc, "$(P):MagIns:VolGHe-2") {
+  field(DESC, "GHe volume above lambda plate")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPA, "$(P):MagIns:Vol-2")
+  field(INPB, "$(P):MagIns:VolLHe-2")
+  field(CALC, "A-B")
+}
+
+record (calc, "$(P):MagIns:VolLHe-3") {
+  field(DESC, "LHe volume in HX683")
+  field(SCAN, "10 second")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPJ, "100.0")
+  field(INPK, "$(P):MagIns:Vol-3")
+  field(INPL, "CstatV-LHe:LT683:sRdV")
+  field(CALC, "L<0?0:(L>=100?K:K*L/J)")
+  field(FLNK, "$(P):MagIns:VolGHe-3")
+}
+
+record (calc, "$(P):MagIns:VolGHe-3") {
+  field(DESC, "GHe volume in HX683")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPA, "$(P):MagIns:Vol-3")
+  field(INPB, "$(P):MagIns:VolLHe-3")
+  field(CALC, "A-B")
+}
+
+record (calc, "$(P):CstatV-VBox:VolLHe") {
+  field(DESC, "LHe volume in CstatV VBox")
+  field(SCAN, "10 second")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPJ, "100.0")
+  field(INPK, "$(P):CstatV-VBox:Vol")
+  field(INPL, "CstatV-LHe:LT600:sRdV")
+  field(CALC, "L<0?0:(L>=100?K:K*L/J)")
+  field(FLNK, "$(P):CstatV-VBox:VolGHe")
+}
+
+record (calc, "$(P):CstatV-VBox:VolGHe") {
+  field(DESC, "GHe volume in  CstatV VBox")
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPA, "$(P):CstatV-VBox:Vol")
+  field(INPB, "$(P):CstatV-VBox:VolLHe")
+  field(CALC, "A-B")
+}
+
+# He mass below the lambda plate
+
+record (calc, "$(P):MagIns:MassLHe-1") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(INPA, "-5.02")
+  field(INPB, "21.5")
+  field(INPC, "125")
+  field(INPK, "CstatV-LHe:TT663M:sRdV")
+  field(INPL, "$(P):MagIns:VolLHe-1")
+  field(CALC, "(A*K*K+B*K+C)*L")
+  field(FLNK, "$(P):MagIns:MassGHe-1")
+}
+
+record (calc, "$(P):MagIns:MassGHe-1") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "58")
+  field(INPB, "1013")
+  field(INPJ, "CstatV-LHe:PT680:sRdV")
+  field(INPK, "CstatV-LHe:TT667M:sRdV")
+  field(INPL, "$(P):MagIns:VolGHe-1")
+  field(CALC, "(A/K*J/B)*L")
+  field(FLNK, "$(P):MagIns:MassHe-1")
+}
+
+record (calc, "$(P):MagIns:MassHe-1") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):MagIns:MassLHe-1")
+  field(INPB, "$(P):MagIns:MassGHe-1")
+  field(CALC, "A+B")
+}
+
+# He mass above the lambda plate
+
+record (calc, "$(P):MagIns:MassLHe-2") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(INPA, "-5.02")
+  field(INPB, "21.5")
+  field(INPC, "125")
+  field(INPK, "CstatV-LHe:TT668M:sRdV")
+  field(INPL, "$(P):MagIns:VolLHe-2")
+  field(CALC, "(A*K*K+B*K+C)*L")
+  field(FLNK, "$(P):MagIns:MassGHe-2")
+}
+
+record (calc, "$(P):MagIns:MassGHe-2") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "58")
+  field(INPB, "1013")
+  field(INPJ, "CstatV-LHe:PT680:sRdV")
+  field(INPK, "CstatV-LHe:TT669M:sRdV")
+  field(INPL, "$(P):MagIns:VolGHe-2")
+  field(CALC, "(A/K*J/B)*L")
+  field(FLNK, "$(P):MagIns:MassHe-2")
+}
+
+record (calc, "$(P):MagIns:MassHe-2") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):MagIns:MassLHe-2")
+  field(INPB, "$(P):MagIns:MassGHe-2")
+  field(CALC, "A+B")
+}
+
+# He mass in the 2K heat exchanger
+
+record (calc, "$(P):MagIns:MassLHe-3") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(INPA, "-1.1766")
+  field(INPB, "6.1229")
+  field(INPC, "-11.763")
+  field(INPD, "153.73")
+  field(INPK, "CstatV-LHe:TT668M:sRdV")
+  field(INPL, "$(P):MagIns:VolLHe-3")
+  field(CALC, "(A*(K^3)+B*(K^2)+C*K+D)*L")
+  field(FLNK, "$(P):MagIns:MassGHe-3")
+}
+
+# The mass of the gas here is negligible
+
+record (calc, "$(P):MagIns:MassGHe-3") {
+  field(EGU, "kg")
+  field(PREC, 1)
+#  field(INPA, "58")
+#  field(INPB, "1013")
+#  field(INPJ, "CstatV-LHe:PT680:sRdV")
+#  field(INPK, "CstatV-LHe:TT669M:sRdV")
+#  field(INPL, "$(P):MagIns:VolGHe-3")
+  field(CALC, "0")
+  field(FLNK, "$(P):MagIns:MassHe-3")
+}
+
+record (calc, "$(P):MagIns:MassHe-3") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):MagIns:MassLHe-3")
+  field(INPB, "$(P):MagIns:MassGHe-3")
+  field(CALC, "A+B")
+}
+
+# He mass in the CstatV VBox
+
+record (calc, "$(P):CstatV-VBox:MassLHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(INPA, "-1.1766")
+  field(INPB, "6.1229")
+  field(INPC, "-11.763")
+  field(INPD, "153.73")
+  field(INPK, "CstatV-LHe:TT613:sRdV")
+  field(INPL, "$(P):CstatV-VBox:VolLHe")
+  field(CALC, "(A*(K^3)+B*(K^2)+C*K+D)*L")
+  field(FLNK, "$(P):CstatV-VBox:MassGHe")
+}
+
+record (calc, "$(P):CstatV-VBox:MassGHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "58")
+  field(INPB, "1013")
+  field(INPJ, "CstatV-LHe:PT600:sRdV")
+  field(INPK, "CstatV-LHe:TT603:sRdV")
+  field(INPL, "$(P):CstatV-VBox:VolGHe")
+  field(CALC, "(A/K*J/B)*L")
+  field(FLNK, "$(P):CstatV-VBox:MassHe")
+}
+
+record (calc, "$(P):CstatV-VBox:MassHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):CstatV-VBox:MassLHe")
+  field(INPB, "$(P):CstatV-VBox:MassGHe")
+  field(CALC, "A+B")
+}
+
