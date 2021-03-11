@@ -1,0 +1,50 @@
+record (calc, "$(P):$(SUBS):VolLHe") {
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(SCAN, "10 second")
+  field(INPA, "$(P):$(PART1):VolLHe$(INDX1)")
+  field(INPB, "$(P):$(PART2):VolLHe$(INDX2)")
+  field(INPC, "$(P):$(PART3):VolLHe$(INDX3)")
+  field(INPD, "$(P):$(PART4):VolLHe$(INDX4)")
+  field(CALC, "A+B+C+D")
+}
+record (calc, "$(P):$(SUBS):VolGHe") {
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(SCAN, "10 second")
+  field(INPA, "$(P):$(PART1):VolGHe$(INDX1)")
+  field(INPB, "$(P):$(PART2):VolGHe$(INDX2)")
+  field(INPC, "$(P):$(PART3):VolGHe$(INDX3)")
+  field(INPD, "$(P):$(PART4):VolGHe$(INDX4)")
+  field(CALC, "A+B+C+D")
+}
+
+record (calc, "$(P):$(SUBS):MassLHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(INPA, "$(P):$(PART1):MassLHe$(INDX1)")
+  field(INPB, "$(P):$(PART2):MassLHe$(INDX2)")
+  field(INPC, "$(P):$(PART3):MassLHe$(INDX3)")
+  field(INPD, "$(P):$(PART4):MassLHe$(INDX4)")
+  field(CALC, "A+B+C+D")
+}
+record (calc, "$(P):$(SUBS):MassGHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(INPA, "$(P):$(PART1):MassGHe$(INDX1)")
+  field(INPB, "$(P):$(PART2):MassGHe$(INDX2)")
+  field(INPC, "$(P):$(PART3):MassGHe$(INDX3)")
+  field(INPD, "$(P):$(PART4):MassGHe$(INDX4)")
+  field(CALC, "A+B+C+D")
+}
+record (calc, "$(P):$(SUBS):MassHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(INPA, "$(P):$(SUBS):MassLHe")
+  field(INPB, "$(P):$(SUBS):MassGHe")
+  field(CALC, "A+B")
+}
+

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>He-panel</name>
+  <width>290</width>
+  <height>330</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_29</name>
+    <text>LHe Volume</text>
+    <x>10</x>
+    <y>40</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_28</name>
+    <pv_name>$(P):$(DEV):VolLHe$(N)</pv_name>
+    <x>170</x>
+    <y>40</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_30</name>
+    <text>Total Volume</text>
+    <x>10</x>
+    <y>10</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_29</name>
+    <pv_name>$(P):$(DEV):Vol$(N)</pv_name>
+    <x>170</x>
+    <y>10</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_31</name>
+    <text>GHe Volume</text>
+    <x>10</x>
+    <y>70</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_30</name>
+    <pv_name>$(P):$(DEV):VolGHe$(N)</pv_name>
+    <x>170</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_32</name>
+    <text>LHe Temperature</text>
+    <x>10</x>
+    <y>120</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_31</name>
+    <pv_name>$(TT_LHE)</pv_name>
+    <x>170</x>
+    <y>120</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_33</name>
+    <text>GHe Temperature</text>
+    <x>10</x>
+    <y>150</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_32</name>
+    <pv_name>$(TT_GHE)</pv_name>
+    <x>170</x>
+    <y>150</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_34</name>
+    <text>Pressure</text>
+    <x>10</x>
+    <y>190</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_33</name>
+    <pv_name>$(PT)</pv_name>
+    <x>170</x>
+    <y>190</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_35</name>
+    <text>Total He mass</text>
+    <x>10</x>
+    <y>230</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_34</name>
+    <pv_name>$(P):$(DEV):MassHe$(N)</pv_name>
+    <x>170</x>
+    <y>230</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_36</name>
+    <text>Total LHe mass</text>
+    <x>10</x>
+    <y>260</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_35</name>
+    <pv_name>$(P):$(DEV):MassLHe$(N)</pv_name>
+    <x>170</x>
+    <y>260</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_37</name>
+    <text>Total GHe mass</text>
+    <x>10</x>
+    <y>290</y>
+    <width>130</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_36</name>
+    <pv_name>$(P):$(DEV):MassGHe$(N)</pv_name>
+    <x>170</x>
+    <y>290</y>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+</display>
