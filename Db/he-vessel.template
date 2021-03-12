@@ -13,7 +13,7 @@ record (calc, "$(P):$(DEV):VolLHe$(N)") {
   field(INPJ, "$(LI_MAX)")
   field(INPK, "$(P):$(DEV):Vol$(N)")
   field(INPL, "$(LI)")
-  field(CALC, "L<0?0:(L>=J?K:K*L/J)")
+  field(CALC, "$(LHE_VOL_CALC)")
   field(FLNK, "$(P):$(DEV):VolGHe$(N)")
 }
 
