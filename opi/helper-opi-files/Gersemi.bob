@@ -5,28 +5,7 @@
     <P>Cryo-HeVol</P>
   </macros>
   <width>1200</width>
-  <height>1150</height>
-  <widget type="label" version="2.0.0">
-    <name>Label</name>
-    <class>TITLE</class>
-    <text>Magnet Insert</text>
-    <x use_class="true">20</x>
-    <y use_class="true">0</y>
-    <width>550</width>
-    <height use_class="true">50</height>
-    <font use_class="true">
-      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
-      </font>
-    </font>
-    <foreground_color use_class="true">
-      <color name="HEADER-TEXT" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <transparent use_class="true">true</transparent>
-    <horizontal_alignment use_class="true">0</horizontal_alignment>
-    <vertical_alignment use_class="true">1</vertical_alignment>
-    <wrap_words use_class="true">false</wrap_words>
-  </widget>
+  <height>1030</height>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
@@ -34,8 +13,8 @@
     </macros>
     <file>../Embedded/foam.bob</file>
     <x>20</x>
-    <y>870</y>
-    <height>270</height>
+    <y>760</y>
+    <height>260</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_1</name>
@@ -44,8 +23,8 @@
     </macros>
     <file>../Embedded/foam.bob</file>
     <x>20</x>
-    <y>600</y>
-    <height>270</height>
+    <y>510</y>
+    <height>260</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_2</name>
@@ -54,8 +33,8 @@
     </macros>
     <file>../Embedded/foam.bob</file>
     <x>20</x>
-    <y>340</y>
-    <height>270</height>
+    <y>260</y>
+    <height>260</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_3</name>
@@ -64,13 +43,13 @@
     </macros>
     <file>../Embedded/foam.bob</file>
     <x>20</x>
-    <y>50</y>
-    <height>270</height>
+    <y>10</y>
+    <height>260</height>
   </widget>
   <widget type="group" version="2.0.0">
     <name>  Below the Lambda Plate  </name>
     <x>420</x>
-    <y>750</y>
+    <y>660</y>
     <width>332</width>
     <height>372</height>
     <transparent>true</transparent>
@@ -91,7 +70,7 @@
   <widget type="group" version="2.0.0">
     <name>  Above the Lambda Plate  </name>
     <x>420</x>
-    <y>350</y>
+    <y>260</y>
     <width>332</width>
     <height>372</height>
     <transparent>true</transparent>
@@ -112,7 +91,7 @@
   <widget type="group" version="2.0.0">
     <name>  HX683 2K Heat Exchanger  </name>
     <x>771</x>
-    <y>351</y>
+    <y>261</y>
     <width>332</width>
     <height>372</height>
     <transparent>true</transparent>
@@ -133,7 +112,7 @@
   <widget type="group" version="2.0.0">
     <name>  Gersemi Valve Box  </name>
     <x>771</x>
-    <y>751</y>
+    <y>661</y>
     <width>332</width>
     <height>372</height>
     <transparent>true</transparent>
@@ -154,7 +133,7 @@
   <widget type="group" version="2.0.0">
     <name>Group</name>
     <x>480</x>
-    <y>30</y>
+    <y>10</y>
     <width>530</width>
     <height>240</height>
     <style>3</style>

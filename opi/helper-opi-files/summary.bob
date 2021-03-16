@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Summary</name>
+  <height>900</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Totals:</text>
+    <x>60</x>
+    <y>20</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Liquid:</text>
+    <x>60</x>
+    <y>50</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Gas:</text>
+    <x>60</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Total:</text>
+    <x>60</x>
+    <y>110</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Gas volume equivalent (1013 mbar, 300K):</text>
+    <x>60</x>
+    <y>140</y>
+    <width>180</width>
+    <height>60</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P):Total:MassLHe</pv_name>
+    <x>240</x>
+    <y>50</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P):Total:MassGHe</pv_name>
+    <x>240</x>
+    <y>80</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P):Total:MassHe</pv_name>
+    <x>240</x>
+    <y>110</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P):Total:VolHeEquiv</pv_name>
+    <x>240</x>
+    <y>150</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Cryo plant:</text>
+    <x>420</x>
+    <y>50</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Gersemi:</text>
+    <x>420</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>CM:</text>
+    <x>420</x>
+    <y>110</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>HNOSS:</text>
+    <x>420</x>
+    <y>140</y>
+    <width>180</width>
+    <height>60</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P):CryoPlant:MassHe</pv_name>
+    <x>600</x>
+    <y>50</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P):CstatV:MassHe</pv_name>
+    <x>600</x>
+    <y>80</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(P):CM:MassHe</pv_name>
+    <x>600</x>
+    <y>110</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <x>600</x>
+    <y>140</y>
+  </widget>
+</display>

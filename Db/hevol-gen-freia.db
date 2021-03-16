@@ -315,6 +315,7 @@ record (calc, "Cryo-CBox:LP:PI3290:sRdV") {
 record (calc, "$(P):Total:MassGHe") {
   field(DESC, "Total mass of helium in gas phase")
   field(EGU, "kg")
+  field(PREC, 1)
   field(SCAN, "10 second")
   field(INPA, "Cryo-HeVol:BufTank:MassGHe")
   field(INPB, "Cryo-HeVol:HPstorage:MassGHe")
@@ -329,6 +330,7 @@ record (calc, "$(P):Total:MassGHe") {
 record (calc, "$(P):Total:MassLHe") {
   field(DESC, "Total mass of helium in liquid phase")
   field(EGU, "kg")
+  field(PREC, 1)
   field(INPD, "Cryo-HeVol:Dwr:MassLHe")
   field(INPE, "Cryo-HeVol:CstatV:MassLHe")
   field(INPF, "Cryo-HeVol:CM:MassLHe")
@@ -339,15 +341,29 @@ record (calc, "$(P):Total:MassLHe") {
 record (calc, "$(P):Total:MassHe") {
   field(DESC, "Total mass of helium in the system")
   field(EGU, "kg")
+  field(PREC, 1)
   field(INPA, "Cryo-HeVol:Total:MassLHe")
   field(INPB, "Cryo-HeVol:Total:MassGHe")
   field(CALC, "A+B")
+  field(FLNK, "$(P):CryoPlant:MassHe")
+}
+
+record (calc, "$(P):CryoPlant:MassHe") {
+  field(DESC, "Total mass of helium in the cryo plant")
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "Cryo-HeVol:Dwr:MassHe")
+  field(INPB, "Cryo-HeVol:HPstorage:MassGHe")
+  field(INPC, "Cryo-HeVol:BufTank:MassGHe")
+  field(INPD, "Cryo-HeVol:GasBag:MassGHe")
+  field(CALC, "A+B+C+D")
   field(FLNK, "$(P):Total:VolHeEquiv")
 }
 
 record (calc, "$(P):Total:VolHeEquiv") {
   field(DESC, "Total mass as volume at 1 atm and 300K")
   field(EGU, "m3")
+  field(PREC, 0)
   field(INPA, "0.163")
   field(INPB, "$(P):Total:MassHe")
   field(CALC, "B/A")
