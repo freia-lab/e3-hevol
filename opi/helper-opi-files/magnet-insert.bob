@@ -67,32 +67,6 @@
     <y>50</y>
     <height>270</height>
   </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_4</name>
-    <text>LI680 Simulation</text>
-    <x>580</x>
-    <y>290</y>
-    <width>130</width>
-  </widget>
-  <widget type="checkbox" version="2.0.0">
-    <name>Check Box</name>
-    <pv_name>CstatV-LHe:LI680:sRdV.SIMM</pv_name>
-    <label>SIMM</label>
-    <x>740</x>
-    <y>290</y>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_3</name>
-    <pv_name>CstatV-LHe:LI680:sRdV</pv_name>
-    <x>830</x>
-    <y>290</y>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry</name>
-    <pv_name>CstatV-LHe:LI680:sRdV.SVAL</pv_name>
-    <x>750</x>
-    <y>320</y>
-  </widget>
   <widget type="group" version="2.0.0">
     <name>  Below the Lambda Plate  </name>
     <x>420</x>
