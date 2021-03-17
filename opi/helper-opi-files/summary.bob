@@ -39,24 +39,28 @@
     <pv_name>$(P):Total:MassLHe</pv_name>
     <x>240</x>
     <y>50</y>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
     <pv_name>$(P):Total:MassGHe</pv_name>
     <x>240</x>
     <y>80</y>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_2</name>
     <pv_name>$(P):Total:MassHe</pv_name>
     <x>240</x>
     <y>110</y>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
     <pv_name>$(P):Total:VolHeEquiv</pv_name>
     <x>240</x>
     <y>150</y>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_6</name>
@@ -89,22 +93,26 @@
     <pv_name>$(P):CryoPlant:MassHe</pv_name>
     <x>600</x>
     <y>50</y>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_5</name>
     <pv_name>$(P):CstatV:MassHe</pv_name>
     <x>600</x>
     <y>80</y>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_6</name>
     <pv_name>$(P):CM:MassHe</pv_name>
     <x>600</x>
     <y>110</y>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_7</name>
     <x>600</x>
     <y>140</y>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
 </display>

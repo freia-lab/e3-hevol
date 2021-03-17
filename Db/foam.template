@@ -1,6 +1,7 @@
 record (ao, "$(P):$(FILLER):BottomPos") {
   field(EGU, "cm")
   field(PREC, 1)
+  field(PINI, YES)
   field(FLNK, "$(P):$(FILLER):BottomPosPerCnt")
 }
 record (calc, "$(P):$(FILLER):BottomPosPerCnt") {
@@ -14,6 +15,7 @@ record (calc, "$(P):$(FILLER):BottomPosPerCnt") {
 record (ao, "$(P):$(FILLER):Height") {
   field(EGU, "cm")
   field(PREC, 1)
+  field(PINI, YES)
   field(FLNK, "$(P):$(FILLER):HeightPerCnt")
 }
 record (calc, "$(P):$(FILLER):HeightPerCnt") {
@@ -28,11 +30,13 @@ record (calc, "$(P):$(FILLER):HeightPerCnt") {
 record (ao, "$(P):$(FILLER):InnerDiam") {
   field(EGU, "cm")
   field(PREC, 1)
+  field(PINI, YES)
   field(FLNK, "$(P):$(FILLER):Volume")
 }
 record (ao, "$(P):$(FILLER):OuterDiam") {
   field(EGU, "cm")
   field(PREC, 1)
+  field(PINI, YES)
   field(FLNK, "$(P):$(FILLER):Volume")
 }
 

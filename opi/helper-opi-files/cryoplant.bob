@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <name>HeVol-GasStorage</name>
+  <name>HeVol-cryoplant</name>
   <macros>
     <P>Cryo-HeVol</P>
   </macros>
@@ -30,7 +30,7 @@
   <widget type="group" version="2.0.0">
     <name>  Gas Bag  </name>
     <x>720</x>
-    <y>110</y>
+    <y>60</y>
     <width>332</width>
     <height>202</height>
     <transparent>true</transparent>
@@ -53,7 +53,7 @@
       <DEV>HPstorage</DEV>
     </macros>
     <x>20</x>
-    <y>110</y>
+    <y>60</y>
     <width>332</width>
     <height>250</height>
     <transparent>true</transparent>
@@ -85,7 +85,7 @@
   <widget type="group" version="2.0.0">
     <name>  Buffer Tank  </name>
     <x>370</x>
-    <y>110</y>
+    <y>60</y>
     <width>332</width>
     <height>202</height>
     <transparent>true</transparent>
@@ -105,7 +105,7 @@
   <widget type="group" version="2.0.0">
     <name>  Dewar  </name>
     <x>20</x>
-    <y>399</y>
+    <y>310</y>
     <width>332</width>
     <height>372</height>
     <transparent>true</transparent>
@@ -115,8 +115,8 @@
         <DEV>Dwr</DEV>
         <N></N>
         <PT>Cryo-CBox:LP:PI3290:sRdV</PT>
-        <TT_GHE>Cryo-Dwr:LHe:TT5200:sRdV</TT_GHE>
-        <TT_LHE>Cryo-Dwr:LHe:TT5200:sRdV</TT_LHE>
+        <TT_GHE>$(P):Dwr:TT-calc:sRdV</TT_GHE>
+        <TT_LHE>$(P):Dwr:TT-calc:sRdV</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
       <width>290</width>
@@ -125,8 +125,7 @@
   </widget>
   <widget type="label" version="2.0.0">
     <text>Total:</text>
-    <x>480</x>
-    <y>40</y>
+    <x>490</x>
     <height>50</height>
     <font>
       <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
@@ -137,8 +136,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P):CryoPlant:MassHe</pv_name>
-    <x>590</x>
-    <y>40</y>
+    <x>600</x>
     <width>150</width>
     <height>50</height>
     <font>
@@ -146,5 +144,185 @@
       </font>
     </font>
     <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  D24  </name>
+    <macros>
+      <DEV>D24</DEV>
+    </macros>
+    <x>370</x>
+    <y>280</y>
+    <width>332</width>
+    <height>400</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_4</name>
+      <macros>
+        <N></N>
+        <PT>Env-FREIA:PT001:sRdV</PT>
+        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
+      </macros>
+      <file>../Embedded/He-panel.bob</file>
+      <width>290</width>
+      <height>330</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>LHe in the dewar:</text>
+      <x>9</x>
+      <y>329</y>
+      <width>140</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>$(P):$(DEV):VolLHe_Lt</pv_name>
+      <x>169</x>
+      <y>329</y>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  D356  </name>
+    <macros>
+      <DEV>D356</DEV>
+    </macros>
+    <x>720</x>
+    <y>280</y>
+    <width>332</width>
+    <height>400</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_5</name>
+      <macros>
+        <N></N>
+        <PT>Env-FREIA:PT001:sRdV</PT>
+        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
+      </macros>
+      <file>../Embedded/He-panel.bob</file>
+      <width>290</width>
+      <height>330</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>LHe in the dewar:</text>
+      <x>9</x>
+      <y>329</y>
+      <width>140</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <pv_name>$(P):$(DEV):VolLHe_Lt</pv_name>
+      <x>169</x>
+      <y>329</y>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  D357  </name>
+    <macros>
+      <DEV>D357</DEV>
+    </macros>
+    <x>20</x>
+    <y>680</y>
+    <width>332</width>
+    <height>400</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_6</name>
+      <macros>
+        <N></N>
+        <PT>Env-FREIA:PT001:sRdV</PT>
+        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
+      </macros>
+      <file>../Embedded/He-panel.bob</file>
+      <width>290</width>
+      <height>330</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>LHe in the dewar:</text>
+      <x>9</x>
+      <y>329</y>
+      <width>140</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_3</name>
+      <pv_name>$(P):$(DEV):VolLHe_Lt</pv_name>
+      <x>169</x>
+      <y>329</y>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  D841  </name>
+    <macros>
+      <DEV>D841</DEV>
+    </macros>
+    <x>370</x>
+    <y>680</y>
+    <width>332</width>
+    <height>400</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_7</name>
+      <macros>
+        <N></N>
+        <PT>Env-FREIA:PT001:sRdV</PT>
+        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
+      </macros>
+      <file>../Embedded/He-panel.bob</file>
+      <width>290</width>
+      <height>330</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>LHe in the dewar:</text>
+      <x>9</x>
+      <y>329</y>
+      <width>140</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_4</name>
+      <pv_name>$(P):$(DEV):VolLHe_Lt</pv_name>
+      <x>169</x>
+      <y>329</y>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  D590  </name>
+    <macros>
+      <DEV>D590</DEV>
+    </macros>
+    <x>720</x>
+    <y>680</y>
+    <width>332</width>
+    <height>400</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_8</name>
+      <macros>
+        <N></N>
+        <PT>Env-FREIA:PT001:sRdV</PT>
+        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
+      </macros>
+      <file>../Embedded/He-panel.bob</file>
+      <width>290</width>
+      <height>330</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>LHe in the dewar:</text>
+      <x>9</x>
+      <y>329</y>
+      <width>140</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_5</name>
+      <pv_name>$(P):$(DEV):VolLHe_Lt</pv_name>
+      <x>169</x>
+      <y>329</y>
+    </widget>
   </widget>
 </display>

@@ -18,3 +18,4 @@ PROJECT = ioc_hevol_freia
 
 
 OPIS = opi
+MISCS += misc/ioc-hevol-freia.req

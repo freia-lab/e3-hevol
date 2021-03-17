@@ -18,14 +18,6 @@ record (ao, "$(P):MagIns:Vol-2") {
   field(PINI, "YES")
 }
 
-record (ao, "$(P):Dwr:Vol") {
-  field(DESC, "Volume of Linde dewar")
-  field(EGU, "m3")
-  field(PREC, 3)
-  field(VAL, "2.0")
-  field(PINI, "YES")
-}
-
 # Gas bag
 #########################
 record (ao, "$(P):GasBag:Vol") {
@@ -52,7 +44,7 @@ record (calc, "$(P):GasBag:VolGHe") {
 record (calc, "$(P):GasBag:MassGHe") {
   field(DESC, "GHe mass in the gas bag")
   field(EGU, "kg")
-  field(PREC, 3)
+  field(PREC, 1)
   field(INPA, "0.163")
   field(INPL, "$(P):GasBag:VolGHe")
   field(CALC, "A*L")
@@ -74,7 +66,7 @@ record (calc, "$(P):BufTank:MassGHe") {
   field(DESC, "GHe mass in the buffer tank")
   field(SCAN, "10 second")
   field(EGU, "kg")
-  field(PREC, 3)
+  field(PREC, 1)
 #  field(INPA,"1000")
 #  field(INPB,"273.15")
   field(INPC, "0.163")
@@ -91,22 +83,24 @@ record (calc, "$(P):BufTank:MassGHe") {
 
 record (longout, "$(P):HPstorage:Bundles") {
   field(DESC, "Number of bundles in HP storage")
+  field(PINI, YES)
+  field(FLNK, "$(P):HPstorage:VolGHe")
 }
 
 record (calc, "$(P):HPstorage:VolGHe") {
   field(DESC, "GHe volume of the HP storage")
-  field(SCAN, "10 second")
   field(EGU, "m3")
+  field(PREC, 3)
   field(INPA,"$(P):HPstorage:Bundles")
   field(INPB,"0.6")
   field(CALC, "A*B")
-  field(FLNK, "$(P):HPstorage:MassGHe")
 }
 
 record (calc, "$(P):HPstorage:MassGHe") {
   field(DESC, "GHe mass in the HP storage")
+  field(SCAN, "10 second")
   field(EGU, "kg")
-  field(PREC, 3)
+  field(PREC, 1)
 #  field(INPA,"1000")
 #  field(INPB,"273.15")
   field(INPC, "0.163")
@@ -235,68 +229,8 @@ record (calc, "$(P):MagIns:MassHe-2") {
 }
 
 
-# Linde Dewar
+# Dewars
 ##################
-
-record (calc, "$(P):Dwr:VolLHe") {
-  field(SCAN, "10 second")
-  field(EGU, "m3")
-  field(PREC, 3)
-  field(INPA, "Cryo-Dwr:LHe:LI5200_Lt")
-  field(CALC, "A/1000")
-  field(FLNK, "$(P):Dwr:VolGHe")
-}
-record (calc, "$(P):Dwr:VolGHe") {
-  field(EGU, "m3")
-  field(PREC, 3)
-  field(INPA, "Cryo-Dwr:LHe:LI5200_Lt")
-  field(INPB, "$(P):Dwr:Vol")
-  field(CALC, "B-A/1000")
-}
-
-record (calc, "$(P):Dwr:MassLHe") {
-  field(EGU, "kg")
-  field(PREC, 1)
-  field(SCAN, "10 second")
-  field(INPA, "-2e-6")
-  field(INPB, "-0.016")
-  field(INPC, "143.59")
-  field(INPK, "Cryo-CBox:LP:PI3290")
-  field(INPL, "$(P):Dwr:VolLHe")
-  field(CALC, "(A*(K^2)+B*K+C)*L")
-  field(FLNK, "$(P):Dwr:MassGHe")
-}
-
-record (calc, "$(P):Dwr:MassGHe") {
-  field(EGU, "kg")
-  field(PREC, 1)
-  field(INPA, "4e-6")
-  field(INPB, "0.0099")
-  field(INPC, "2.8838")
-  field(INPK, "Cryo-CBox:LP:PI3290")
-  field(INPL, "$(P):Dwr:VolGHe")
-  field(CALC, "(A*(K^2)+B*K+C)*L")
-  field(FLNK, "$(P):Dwr:MassHe")
-}
-
-record (calc, "$(P):Dwr:MassHe") {
-  field(EGU, "kg")
-  field(PREC, 1)
-  field(INPA, "$(P):Dwr:MassLHe")
-  field(INPB, "$(P):Dwr:MassGHe")
-  field(CALC, "A+B")
-}
-
-record (calc, "Cryo-Dwr:LHe:TT5200:sRdV") {
-  field(EGU, "K")
-  field(PREC, 3)
-  field(SCAN, "10 second")
-  field(INPA, "-0.3193")
-  field(INPB, "1.715")
-  field(INPC, "2.8012")
-  field(INPK, "Cryo-CBox:LP:PI3290")
-  field(CALC, "A*(K^2)+B*K+C")
-}
 
 record (calc, "Cryo-CBox:LP:PI3290:sRdV") {
   field(EGU, "mbar")
@@ -307,6 +241,40 @@ record (calc, "Cryo-CBox:LP:PI3290:sRdV") {
   field(CALC, "A*B")
 }
 
+record (ao, "$(P):D24:VolLHe_Lt") {
+  field(DESC, "LHe in D24 dewar [l]")
+  field(EGU, "l")
+  field(PREC, 1)
+  field(PINI, YES)
+}
+
+record (ao, "$(P):D356:VolLHe_Lt") {
+  field(DESC, "LHe in D356 dewar [l]")
+  field(EGU, "l")
+  field(PREC, 1)
+  field(PINI, YES)
+}
+
+record (ao, "$(P):D357:VolLHe_Lt") {
+  field(DESC, "LHe in D357 dewar [l]")
+  field(EGU, "l")
+  field(PREC, 1)
+  field(PINI, YES)
+}
+
+record (ao, "$(P):D841:VolLHe_Lt") {
+  field(DESC, "LHe in D841 dewar [l]")
+  field(EGU, "l")
+  field(PREC, 1)
+  field(PINI, YES)
+}
+
+record (ao, "$(P):D590:VolLHe_Lt") {
+  field(DESC, "LHe in D590 dewar [l]")
+  field(EGU, "l")
+  field(PREC, 1)
+  field(PINI, YES)
+}
 
 #######################################
 # TOTALS
@@ -356,7 +324,12 @@ record (calc, "$(P):CryoPlant:MassHe") {
   field(INPB, "Cryo-HeVol:HPstorage:MassGHe")
   field(INPC, "Cryo-HeVol:BufTank:MassGHe")
   field(INPD, "Cryo-HeVol:GasBag:MassGHe")
-  field(CALC, "A+B+C+D")
+  field(INPE, "Cryo-HeVol:D24:MassHe")
+  field(INPF, "Cryo-HeVol:D356:MassHe")
+  field(INPG, "Cryo-HeVol:D357:MassHe")
+  field(INPH, "Cryo-HeVol:D841:MassHe")
+  field(INPI, "Cryo-HeVol:D590:MassHe")
+  field(CALC, "A+B+C+D+E+F+G+H+I")
   field(FLNK, "$(P):Total:VolHeEquiv")
 }
 
