@@ -241,40 +241,6 @@ record (calc, "Cryo-CBox:LP:PI3290:sRdV") {
   field(CALC, "A*B")
 }
 
-record (ao, "$(P):D24:VolLHe_Lt") {
-  field(DESC, "LHe in D24 dewar [l]")
-  field(EGU, "l")
-  field(PREC, 1)
-  field(PINI, YES)
-}
-
-record (ao, "$(P):D356:VolLHe_Lt") {
-  field(DESC, "LHe in D356 dewar [l]")
-  field(EGU, "l")
-  field(PREC, 1)
-  field(PINI, YES)
-}
-
-record (ao, "$(P):D357:VolLHe_Lt") {
-  field(DESC, "LHe in D357 dewar [l]")
-  field(EGU, "l")
-  field(PREC, 1)
-  field(PINI, YES)
-}
-
-record (ao, "$(P):D841:VolLHe_Lt") {
-  field(DESC, "LHe in D841 dewar [l]")
-  field(EGU, "l")
-  field(PREC, 1)
-  field(PINI, YES)
-}
-
-record (ao, "$(P):D590:VolLHe_Lt") {
-  field(DESC, "LHe in D590 dewar [l]")
-  field(EGU, "l")
-  field(PREC, 1)
-  field(PINI, YES)
-}
 
 #######################################
 # TOTALS
@@ -315,6 +281,7 @@ record (calc, "$(P):Total:MassHe") {
   field(CALC, "A+B")
   field(FLNK, "$(P):CryoPlant:MassHe")
 }
+
 
 record (calc, "$(P):CryoPlant:MassHe") {
   field(DESC, "Total mass of helium in the cryo plant")

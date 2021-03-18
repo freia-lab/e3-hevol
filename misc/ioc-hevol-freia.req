@@ -15,8 +15,17 @@ Cryo-HeVol:Magnet:Height.VAL
 Cryo-HeVol:Magnet:InnerDiam.VAL
 Cryo-HeVol:Magnet:OuterDiam.VAL
 Cryo-HeVol:HPstorage:Bundles.VAL
+Cryo-HeVol:Ctrl:ResetTime.VAL
 Cryo-HeVol:D24:VolLHe_Lt.VAL
 Cryo-HeVol:D356:VolLHe_Lt.VAL
 Cryo-HeVol:D357:VolLHe_Lt.VAL
 Cryo-HeVol:D841:VolLHe_Lt.VAL
 Cryo-HeVol:D590:VolLHe_Lt.VAL
+Cryo-HeVol:D24:dMassHe.VAL
+Cryo-HeVol:D356:dMassHe.VAL
+Cryo-HeVol:D357:dMassHe.VAL
+Cryo-HeVol:D590:dMassHe.VAL
+Cryo-HeVol:D841:dMassHe.VAL
+Cryo-HeVol:Total-0:MassHe.VAL
+Cryo-HeVol:Total:MassHe.VAL
+

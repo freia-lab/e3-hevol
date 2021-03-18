@@ -1,0 +1,44 @@
+record (bo, "$(P):Ctrl:Reset") {
+  field(DESC, "Reset the He balance accounting")
+  field(HIGH, "0.5")
+  field(UDFS, NO_ALARM)
+  field(FLNK, "$(P):Ctrl:Fanout")
+}
+
+record (fanout, "$(P):Ctrl:Fanout") {
+  field(LNK1, "$(P):D24:InOut-Rst")
+  field(LNK2, "$(P):D356:InOut-Rst")
+  field(LNK3, "$(P):D357:InOut-Rst")
+  field(LNK4, "$(P):D841:InOut-Rst")
+  field(LNK5, "$(P):D590:InOut-Rst")
+  field(LNKE, "$(P):Ctrl:ResetTime")
+  field(LNKF, "$(P):Ctrl:Total:MassHe-Save")
+}
+
+record (calc, "$(P):Ctrl:Zero") {
+  field(CALC, "0")
+  field(PINI, YES)
+}
+
+record (ao, "$(P):Total-0:MassHe") {
+  field(DESC, "Total mass of helium at Reset")
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(PINI, YES)
+  field(DOL, "$(P):Total:MassHe")
+}
+
+record (calcout, "$(P):Ctrl:Total:MassHe-Save") {
+  field(INPA, "$(P):Ctrl:Reset")
+  field(CALC, "A=1?1:0")
+  field(OUT, "$(P):Total-0:MassHe.OMSL")
+  field(FLNK, "$(P):Total-0:MassHe.PROC")
+}
+
+
+record (stringin, "$(P):Ctrl:ResetTime") {
+  field(DTYP, "Soft Timestamp")
+  field(PINI, NO)
+  field(UDFS, NO_ALARM)
+  field(INP, "@%Y-%m-%d %H:%M:%S")
+}

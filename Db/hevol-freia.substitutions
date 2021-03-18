@@ -2,6 +2,10 @@ file "hevol-gen-freia.db" { pattern
 {P}
 {Cryo-HeVol}
 }
+file "he-balance.template" { pattern
+{P}
+{Cryo-HeVol}
+}
 
 file "foam.template" { pattern
 {P,          FILLER,  LI,    LI_MAX}
@@ -36,6 +40,9 @@ file "he-totals.template" { pattern
 file "dewar.template" { pattern
 {P,         DEV,   DEV_STR,              VOL,   ACT_VOL_L,		     PT}
 {Cryo-HeVol Dwr	   "Linde dewar" 	 2.0    Cryo-Dwr:LHe:LI5200_Lt       Cryo-CBox:LP:PI3290}
+}
+file "ext-dewar.template" { pattern
+{P,         DEV,   DEV_STR,              VOL,   ACT_VOL_L,		     PT}
 {Cryo-HeVol D24	   "D24 portable dewar"  0.25   Cryo-HeVol:D24:VolLHe_Lt     1.013}
 {Cryo-HeVol D356   "D356 portable dewar" 0.1   	Cryo-HeVol:D356:VolLHe_Lt    1.013}
 {Cryo-HeVol D357   "D357 portable dewar" 0.1   	Cryo-HeVol:D357:VolLHe_Lt    1.013}

@@ -115,4 +115,183 @@
     <y>140</y>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>Reset He Balance</description>
+      </action>
+    </actions>
+    <pv_name>$(P):Ctrl:Reset</pv_name>
+    <x>90</x>
+    <y>360</y>
+    <width>140</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <DEV>D24</DEV>
+    </macros>
+    <x>280</x>
+    <y>470</y>
+    <width>260</width>
+    <height>25</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P):$(DEV):InOut</pv_name>
+      <x>110</x>
+      <width>40</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(P):$(DEV):dMassHe</pv_name>
+      <x>160</x>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Dewar $(DEV):</text>
+      <x>10</x>
+      <width>90</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(P):Ctrl:ResetTime</pv_name>
+    <x>500</x>
+    <y>360</y>
+    <width>190</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P):Total-0:MassHe</pv_name>
+    <x>500</x>
+    <y>390</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_1</name>
+    <macros>
+      <DEV>D356</DEV>
+    </macros>
+    <x>280</x>
+    <y>500</y>
+    <width>260</width>
+    <height>25</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>$(P):$(DEV):InOut</pv_name>
+      <x>110</x>
+      <width>40</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(P):$(DEV):dMassHe</pv_name>
+      <x>160</x>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>Dewar $(DEV):</text>
+      <x>10</x>
+      <width>90</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_2</name>
+    <macros>
+      <DEV>D357</DEV>
+    </macros>
+    <x>280</x>
+    <y>530</y>
+    <width>260</width>
+    <height>25</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <pv_name>$(P):$(DEV):InOut</pv_name>
+      <x>110</x>
+      <width>40</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>$(P):$(DEV):dMassHe</pv_name>
+      <x>160</x>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>Dewar $(DEV):</text>
+      <x>10</x>
+      <width>90</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_3</name>
+    <macros>
+      <DEV>D841</DEV>
+    </macros>
+    <x>280</x>
+    <y>560</y>
+    <width>260</width>
+    <height>25</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_3</name>
+      <pv_name>$(P):$(DEV):InOut</pv_name>
+      <x>110</x>
+      <width>40</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(P):$(DEV):dMassHe</pv_name>
+      <x>160</x>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_12</name>
+      <text>Dewar $(DEV):</text>
+      <x>10</x>
+      <width>90</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_4</name>
+    <macros>
+      <DEV>D590</DEV>
+    </macros>
+    <x>280</x>
+    <y>590</y>
+    <width>260</width>
+    <height>25</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_4</name>
+      <pv_name>$(P):$(DEV):InOut</pv_name>
+      <x>110</x>
+      <width>40</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_14</name>
+      <pv_name>$(P):$(DEV):dMassHe</pv_name>
+      <x>160</x>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_13</name>
+      <text>Dewar $(DEV):</text>
+      <x>10</x>
+      <width>90</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
 </display>
