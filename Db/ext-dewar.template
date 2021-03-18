@@ -46,8 +46,8 @@ record (calc, "$(P):$(DEV):MassLHe") {
 record (calc, "$(P):$(DEV):MassGHe") {
   field(EGU, "kg")
   field(PREC, 1)
-  field(INPA, "4e-6")
-  field(INPB, "0.0099")
+  field(INPA, "3.6341e-6")
+  field(INPB, "9.9234e-3")
   field(INPC, "2.8838")
   field(INPK, "Cryo-CBox:LP:PI3290")
   field(INPL, "$(P):$(DEV):VolGHe")

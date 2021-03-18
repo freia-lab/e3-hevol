@@ -269,17 +269,25 @@ record (calc, "$(P):Total:MassLHe") {
   field(INPE, "Cryo-HeVol:CstatV:MassLHe")
   field(INPF, "Cryo-HeVol:CM:MassLHe")
   field(CALC, "D+E+F")
-  field(FLNK, "$(P):Total:MassHe")
+  field(FLNK, "$(P):Total:MassHe-calc")
 }
 
-record (calc, "$(P):Total:MassHe") {
+record (calcout, "$(P):Total:MassHe-calc") {
   field(DESC, "Total mass of helium in the system")
   field(EGU, "kg")
   field(PREC, 1)
   field(INPA, "Cryo-HeVol:Total:MassLHe")
   field(INPB, "Cryo-HeVol:Total:MassGHe")
   field(CALC, "A+B")
-  field(FLNK, "$(P):CryoPlant:MassHe")
+  field(OUT, "$(P):Total:MassHe PP")
+  field(FLNK, "$(P):CryoPlant:MassHe.PROC")
+}
+
+record (ao, "$(P):Total:MassHe") {
+  field(DESC, "Total mass of helium in the system")
+  field(PINI, YES)
+  field(EGU, "kg")
+  field(PREC, 1)
 }
 
 

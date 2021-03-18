@@ -1,27 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <name>Display</name>
-  <widget type="label" version="2.0.0">
-    <name>Label_1</name>
-    <text></text>
-    <y>50</y>
+  <name>HeVol-CM</name>
+  <macros>
+    <P>Cryo-HeVol</P>
+  </macros>
+  <width>1200</width>
+  <height>1030</height>
+  <widget type="group" version="2.0.0">
+    <name>  Valve Box    </name>
+    <x>40</x>
+    <y>250</y>
+    <width>332</width>
+    <height>372</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_4</name>
+      <macros>
+        <DEV>CM-VBox</DEV>
+        <N></N>
+        <PT>CstatH-RHtr:PT550:sRdV</PT>
+        <TT_GHE>CM-VBox:TT01:sRdV</TT_GHE>
+        <TT_LHE>CM-VBox:TT01:sRdV</TT_LHE>
+      </macros>
+      <file>../Embedded/He-panel.bob</file>
+      <width>290</width>
+      <height>330</height>
+    </widget>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>sim://sine</pv_name>
+  <widget type="group" version="2.0.0">
+    <name>  Cryomodule  </name>
+    <x>391</x>
+    <y>251</y>
+    <width>332</width>
+    <height>372</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_6</name>
+      <macros>
+        <DEV>CM-CM</DEV>
+        <N></N>
+        <PT>CM-CM:PT03:sRdV</PT>
+        <TT_GHE>CM-CM:TT06:sRdV</TT_GHE>
+        <TT_LHE>CM-CM:TT04:sRdV</TT_LHE>
+      </macros>
+      <file>../Embedded/He-panel.bob</file>
+      <width>290</width>
+      <height>330</height>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
     <x>100</x>
-    <y>50</y>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_2</name>
-    <class>COMMENT</class>
-    <text>Some comment.</text>
-    <x>220</x>
-    <y>50</y>
-    <width>140</width>
-    <font>
-      <font name="Comment" family="Source Sans Pro" style="ITALIC" size="16.0">
+    <width>530</width>
+    <height>240</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_38</name>
+      <text>Totals</text>
+      <width>530</width>
+      <height>58</height>
+      <font>
+        <font name="HEADER" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+        </font>
       </font>
-    </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>2</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_39</name>
+      <text>LHe</text>
+      <y>90</y>
+      <width>62</width>
+      <height>48</height>
+      <font>
+        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_40</name>
+      <text>GHe</text>
+      <y>140</y>
+      <width>66</width>
+      <height>48</height>
+      <font>
+        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_41</name>
+      <text>Volume</text>
+      <x>180</x>
+      <y>60</y>
+      <width>170</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_42</name>
+      <text>Mass</text>
+      <x>360</x>
+      <y>60</y>
+      <width>170</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_43</name>
+      <text>LHe + GHe</text>
+      <y>190</y>
+      <width>161</width>
+      <height>48</height>
+      <font>
+        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_38</name>
+      <pv_name>$(P):CM:VolLHe</pv_name>
+      <x>180</x>
+      <y>90</y>
+      <width>170</width>
+      <height>50</height>
+      <font>
+        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_39</name>
+      <pv_name>$(P):CM:MassLHe</pv_name>
+      <x>360</x>
+      <y>90</y>
+      <width>170</width>
+      <height>50</height>
+      <font>
+        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_40</name>
+      <pv_name>$(P):CM:VolGHe</pv_name>
+      <x>180</x>
+      <y>140</y>
+      <width>170</width>
+      <height>50</height>
+      <font>
+        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_41</name>
+      <pv_name>$(P):CM:MassGHe</pv_name>
+      <x>360</x>
+      <y>140</y>
+      <width>170</width>
+      <height>50</height>
+      <font>
+        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_42</name>
+      <pv_name>$(P):CM:MassHe</pv_name>
+      <x>360</x>
+      <y>190</y>
+      <width>170</width>
+      <height>50</height>
+      <font>
+        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
   </widget>
 </display>
