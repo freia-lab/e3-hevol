@@ -1,44 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>Summary</name>
+  <width>1200</width>
   <height>900</height>
-  <widget type="label" version="2.0.0">
-    <name>Label_1</name>
-    <text>Totals:</text>
-    <x>60</x>
-    <y>20</y>
-  </widget>
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
     <text>Liquid:</text>
-    <x>60</x>
-    <y>50</y>
+    <x>20</x>
+    <y>20</y>
+    <width>220</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
     <text>Gas:</text>
-    <x>60</x>
+    <x>20</x>
     <y>80</y>
+    <width>220</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_4</name>
     <text>Total:</text>
-    <x>60</x>
-    <y>110</y>
+    <x>20</x>
+    <y>140</y>
+    <width>220</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_5</name>
     <text>Gas volume equivalent (1013 mbar, 300K):</text>
-    <x>60</x>
-    <y>140</y>
-    <width>180</width>
+    <x>20</x>
+    <y>190</y>
+    <width>220</width>
     <height>60</height>
+    <font>
+      <font name="LARGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="21.0">
+      </font>
+    </font>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P):Total:MassLHe</pv_name>
     <x>240</x>
-    <y>50</y>
+    <y>20</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
@@ -46,251 +69,525 @@
     <pv_name>$(P):Total:MassGHe</pv_name>
     <x>240</x>
     <y>80</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_2</name>
     <pv_name>$(P):Total:MassHe</pv_name>
     <x>240</x>
-    <y>110</y>
+    <y>140</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
     <pv_name>$(P):Total:VolHeEquiv</pv_name>
     <x>240</x>
-    <y>150</y>
+    <y>200</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_6</name>
     <text>Cryo plant:</text>
-    <x>420</x>
-    <y>50</y>
+    <x>500</x>
+    <y>20</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_7</name>
     <text>Gersemi:</text>
-    <x>420</x>
+    <x>500</x>
     <y>80</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_8</name>
     <text>CM:</text>
-    <x>420</x>
-    <y>110</y>
+    <x>500</x>
+    <y>140</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_9</name>
     <text>HNOSS:</text>
-    <x>420</x>
-    <y>140</y>
+    <x>500</x>
+    <y>200</y>
     <width>180</width>
-    <height>60</height>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
     <pv_name>$(P):CryoPlant:MassHe</pv_name>
-    <x>600</x>
-    <y>50</y>
+    <x>690</x>
+    <y>20</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_5</name>
     <pv_name>$(P):CstatV:MassHe</pv_name>
-    <x>600</x>
+    <x>690</x>
     <y>80</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_6</name>
     <pv_name>$(P):CM:MassHe</pv_name>
-    <x>600</x>
-    <y>110</y>
+    <x>690</x>
+    <y>140</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_7</name>
-    <x>600</x>
-    <y>140</y>
-    <horizontal_alignment>2</horizontal_alignment>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button</name>
-    <actions execute_as_one="true">
-      <action type="write_pv">
-        <pv_name>$(pv_name)</pv_name>
-        <value>1</value>
-        <description>Reset He Balance</description>
-      </action>
-    </actions>
-    <pv_name>$(P):Ctrl:Reset</pv_name>
-    <x>90</x>
-    <y>360</y>
-    <width>140</width>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <macros>
-      <DEV>D24</DEV>
-    </macros>
-    <x>280</x>
-    <y>470</y>
-    <width>260</width>
-    <height>25</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry</name>
-      <pv_name>$(P):$(DEV):InOut</pv_name>
-      <x>110</x>
-      <width>40</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_8</name>
-      <pv_name>$(P):$(DEV):dMassHe</pv_name>
-      <x>160</x>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label</name>
-      <text>Dewar $(DEV):</text>
-      <x>10</x>
-      <width>90</width>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_11</name>
-    <pv_name>$(P):Ctrl:ResetTime</pv_name>
-    <x>500</x>
-    <y>360</y>
-    <width>190</width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_12</name>
-    <pv_name>$(P):Total-0:MassHe</pv_name>
-    <x>500</x>
-    <y>390</y>
+    <x>690</x>
+    <y>200</y>
+    <width>180</width>
+    <height>50</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>Group_1</name>
-    <macros>
-      <DEV>D356</DEV>
-    </macros>
-    <x>280</x>
-    <y>500</y>
-    <width>260</width>
-    <height>25</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_1</name>
-      <pv_name>$(P):$(DEV):InOut</pv_name>
-      <x>110</x>
-      <width>40</width>
+    <name>He Balance Sheet</name>
+    <x>20</x>
+    <y>300</y>
+    <width>337</width>
+    <height>432</height>
+    <foreground_color>
+      <color name="BLUE-BORDER" red="47" green="135" blue="148">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="BLUE-GROUP-BACKGROUND" red="179" green="209" blue="209">
+      </color>
+    </background_color>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button</name>
+      <actions execute_as_one="true">
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>Reset He Balance</description>
+        </action>
+      </actions>
+      <pv_name>$(P):Ctrl:Reset</pv_name>
+      <x>25</x>
+      <y>320</y>
+      <width>140</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <macros>
+        <DEV>D24</DEV>
+      </macros>
+      <x>35</x>
+      <y>90</y>
+      <width>260</width>
+      <height>25</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry</name>
+        <pv_name>$(P):$(DEV):InOut</pv_name>
+        <x>110</x>
+        <width>40</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_8</name>
+        <pv_name>$(P):$(DEV):dMassHe</pv_name>
+        <x>160</x>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Dewar $(DEV):</text>
+        <x>10</x>
+        <width>90</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
     </widget>
     <widget type="textupdate" version="2.0.0">
-      <name>Text Update_9</name>
-      <pv_name>$(P):$(DEV):dMassHe</pv_name>
-      <x>160</x>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_10</name>
-      <text>Dewar $(DEV):</text>
-      <x>10</x>
-      <width>90</width>
+      <name>Text Update_11</name>
+      <pv_name>$(P):Ctrl:ResetTime</pv_name>
+      <x>135</x>
+      <y>360</y>
+      <width>160</width>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
     </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_2</name>
-    <macros>
-      <DEV>D357</DEV>
-    </macros>
-    <x>280</x>
-    <y>530</y>
-    <width>260</width>
-    <height>25</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_2</name>
-      <pv_name>$(P):$(DEV):InOut</pv_name>
-      <x>110</x>
-      <width>40</width>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(P):Total-0:MassHe</pv_name>
+      <x>195</x>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_1</name>
+      <macros>
+        <DEV>D356</DEV>
+      </macros>
+      <x>35</x>
+      <y>120</y>
+      <width>260</width>
+      <height>25</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry_1</name>
+        <pv_name>$(P):$(DEV):InOut</pv_name>
+        <x>110</x>
+        <width>40</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_9</name>
+        <pv_name>$(P):$(DEV):dMassHe</pv_name>
+        <x>160</x>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_10</name>
+        <text>Dewar $(DEV):</text>
+        <x>10</x>
+        <width>90</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_2</name>
+      <macros>
+        <DEV>D357</DEV>
+      </macros>
+      <x>35</x>
+      <y>150</y>
+      <width>260</width>
+      <height>25</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry_2</name>
+        <pv_name>$(P):$(DEV):InOut</pv_name>
+        <x>110</x>
+        <width>40</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_10</name>
+        <pv_name>$(P):$(DEV):dMassHe</pv_name>
+        <x>160</x>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_11</name>
+        <text>Dewar $(DEV):</text>
+        <x>10</x>
+        <width>90</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_3</name>
+      <macros>
+        <DEV>D841</DEV>
+      </macros>
+      <x>35</x>
+      <y>180</y>
+      <width>260</width>
+      <height>25</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry_3</name>
+        <pv_name>$(P):$(DEV):InOut</pv_name>
+        <x>110</x>
+        <width>40</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_13</name>
+        <pv_name>$(P):$(DEV):dMassHe</pv_name>
+        <x>160</x>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_12</name>
+        <text>Dewar $(DEV):</text>
+        <x>10</x>
+        <width>90</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_4</name>
+      <macros>
+        <DEV>D590</DEV>
+      </macros>
+      <x>35</x>
+      <y>210</y>
+      <width>260</width>
+      <height>25</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry_4</name>
+        <pv_name>$(P):$(DEV):InOut</pv_name>
+        <x>110</x>
+        <width>40</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_14</name>
+        <pv_name>$(P):$(DEV):dMassHe</pv_name>
+        <x>160</x>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_13</name>
+        <text>Dewar $(DEV):</text>
+        <x>10</x>
+        <width>90</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_6</name>
+      <macros>
+        <DEV>HPstorage</DEV>
+      </macros>
+      <x>35</x>
+      <y>240</y>
+      <width>260</width>
+      <height>25</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry_6</name>
+        <pv_name>$(P):$(DEV):InOut</pv_name>
+        <x>90</x>
+        <width>60</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_16</name>
+        <pv_name>$(P):$(DEV):dMassHe</pv_name>
+        <x>160</x>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_15</name>
+        <text>$(DEV):</text>
+        <x>10</x>
+        <width>90</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
     </widget>
     <widget type="textupdate" version="2.0.0">
-      <name>Text Update_10</name>
-      <pv_name>$(P):$(DEV):dMassHe</pv_name>
-      <x>160</x>
+      <name>Text Update_17</name>
+      <pv_name>$(P):Total:MassHe</pv_name>
+      <x>195</x>
+      <y>30</y>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_18</name>
+      <pv_name>$(P):GHeRet:dMassHe</pv_name>
+      <x>195</x>
+      <y>60</y>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_19</name>
+      <pv_name>$(P):Losses:dMassHe</pv_name>
+      <x>195</x>
+      <y>280</y>
+      <horizontal_alignment>2</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Label_11</name>
-      <text>Dewar $(DEV):</text>
-      <x>10</x>
-      <width>90</width>
+      <name>Label_16</name>
+      <text>Last reset on</text>
+      <x>35</x>
+      <y>360</y>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
       <vertical_alignment>1</vertical_alignment>
     </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_3</name>
-    <macros>
-      <DEV>D841</DEV>
-    </macros>
-    <x>280</x>
-    <y>560</y>
-    <width>260</width>
-    <height>25</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_3</name>
-      <pv_name>$(P):$(DEV):InOut</pv_name>
-      <x>110</x>
-      <width>40</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_13</name>
-      <pv_name>$(P):$(DEV):dMassHe</pv_name>
-      <x>160</x>
+    <widget type="label" version="2.0.0">
+      <name>Label_17</name>
+      <text>Current He amount:</text>
+      <x>15</x>
+      <y>30</y>
+      <width>150</width>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Label_12</name>
-      <text>Dewar $(DEV):</text>
-      <x>10</x>
-      <width>90</width>
+      <name>Label_18</name>
+      <text>He amount at Reset:</text>
+      <x>15</x>
+      <width>150</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_19</name>
+      <text>GHe return since Reset:</text>
+      <x>15</x>
+      <y>60</y>
+      <width>160</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_20</name>
+      <text>Losses since Reset:</text>
+      <x>45</x>
+      <y>280</y>
+      <width>130</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_22</name>
+      <text>+</text>
+      <y>60</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
       <vertical_alignment>1</vertical_alignment>
     </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group_4</name>
-    <macros>
-      <DEV>D590</DEV>
-    </macros>
-    <x>280</x>
-    <y>590</y>
-    <width>260</width>
-    <height>25</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_4</name>
-      <pv_name>$(P):$(DEV):InOut</pv_name>
-      <x>110</x>
-      <width>40</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_14</name>
-      <pv_name>$(P):$(DEV):dMassHe</pv_name>
-      <x>160</x>
+    <widget type="label" version="2.0.0">
+      <name>Label_23</name>
+      <text>+</text>
+      <y>90</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Label_13</name>
-      <text>Dewar $(DEV):</text>
-      <x>10</x>
-      <width>90</width>
+      <name>Label_24</name>
+      <text>+</text>
+      <y>150</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_25</name>
+      <text>+</text>
+      <y>120</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_26</name>
+      <text>+</text>
+      <y>180</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_27</name>
+      <text>+</text>
+      <y>210</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>+</text>
+      <y>240</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_29</name>
+      <text>-</text>
+      <y>30</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_30</name>
+      <text>=</text>
+      <y>280</y>
+      <width>20</width>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
       <vertical_alignment>1</vertical_alignment>
     </widget>
   </widget>

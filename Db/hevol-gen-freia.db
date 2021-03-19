@@ -110,6 +110,38 @@ record (calc, "$(P):HPstorage:MassGHe") {
   field(CALC, "L*K*C")
 }
 
+# PVs for He balance calculations
+########
+
+record (calcout, "$(P):HPstorage:InOut-Rst") {
+  field(INPA, "$(P):Ctrl:Reset")
+  field(CALC, "A=1?1:0")
+  field(OUT, "$(P):HPstorage:InOut.OMSL")
+  field(FLNK, "$(P):HPstorage:InOut.PROC")
+}
+
+record (ao, "$(P):HPstorage:InOut") {
+  field(DESC, "Adding/removing from the cryo system")
+  field(EGU, "m3")
+  field(DOL, "$(P):Ctrl:Zero")
+  field(UDFS, NO_ALARM)
+  field(FLNK, "$(P):HPstorage:dMassHe.PROC")
+}
+
+record (calc, "$(P):HPstorage:dMassHe") {
+  field(DESC, "LHe delivery(-) and return (+)")
+  field(EGU, "kg")
+  field(PREC, "1")
+  field(PINI, YES)
+  field(INPA, "0.163")
+  field(INPI, "$(P):Ctrl:Reset")
+  field(INPJ, "$(P):HPstorage:dMassHe")
+  field(INPK, "1000.0")
+  field(INPL, "$(P):HPstorage:InOut")
+  field(CALC, "I=1?0:A*L+J")
+}
+
+
 ##################################
 
 record (calc, "$(P):MagIns:VolLHe-1") {

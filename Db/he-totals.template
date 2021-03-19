@@ -105,10 +105,11 @@ record (calc, "$(P):CM:MassHe") {
 record (fanout, "$(P):Ctrl:Totals-fanout") {
   field(SCAN, "10 second")
   field(PHAS, 3)
+  field(LNK0, "$(P):GHeRet:dMassHe")
   field(LNK1, "$(P):Total:MassGHe-calc")
   field(LNK2, "$(P):Total:MassLHe-calc")
   field(LNK3, "$(P):Total:MassHe-calc")
-#  field(LNK4, 
+  field(LNK4, "$(P):Losses:dMassHe")
 #  field(LNK5, 
 }
 
@@ -194,4 +195,20 @@ record (calc, "$(P):Total:VolHeEquiv") {
   field(INPA, "0.163")
   field(INPB, "$(P):Total:MassHe")
   field(CALC, "B/A")
+}
+
+record (calc, "$(P):Losses:dMassHe") {
+  field(DESC, "He losses")
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):Total-0:MassHe")
+  field(INPB, "$(P):Total:MassHe")
+  field(INPC, "$(P):GHeRet:dMassHe")
+  field(INPD, "$(P):D24:dMassHe")
+  field(INPE, "$(P):D356:dMassHe")
+  field(INPF, "$(P):D357:dMassHe")
+  field(INPG, "$(P):D841:dMassHe")
+  field(INPH, "$(P):D590:dMassHe")
+  field(INPI, "$(P):HPstorage:dMassHe")
+  field(CALC, "A-B+C+D+E+F+G+H+I")
 }

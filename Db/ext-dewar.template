@@ -86,7 +86,7 @@ record (calcout, "$(P):$(DEV):InOut-Rst") {
 }
 
 record (ao, "$(P):$(DEV):InOut") {
-  field(DESC, "$(DEV) adding/removing from the cryo system")
+  field(DESC, "Adding/removing from the cryo system")
   field(EGU, "l")
   field(DOL, "$(P):Ctrl:Zero")
   field(UDFS, NO_ALARM)
