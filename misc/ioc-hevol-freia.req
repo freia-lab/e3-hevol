@@ -27,5 +27,6 @@ Cryo-HeVol:D357:dMassHe.VAL
 Cryo-HeVol:D590:dMassHe.VAL
 Cryo-HeVol:D841:dMassHe.VAL
 Cryo-HeVol:Total-0:MassHe.VAL
+Cryo-HeVol:Total:MassGHe.VAL
+Cryo-HeVol:Total:MassLHe.VAL
 Cryo-HeVol:Total:MassHe.VAL
-

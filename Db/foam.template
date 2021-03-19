@@ -57,7 +57,7 @@ record (calc, "$(P):$(FILLER):Volume") {
 record(calc, "$(P):$(FILLER):VolGas") {
   field(EGU, "m3")
   field(PREC, 3)
-  field(SCAN, "10 second")
+  field(SCAN, "2 second")
   field(INPA, "$(P):$(FILLER):Volume")
   field(INPB, "$(P):$(FILLER):BottomPosPerCnt")
   field(INPC, "$(P):$(FILLER):HeightPerCnt")

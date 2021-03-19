@@ -29,9 +29,8 @@ file "he-vessel.template" { pattern
 }
 
 file "he-totals.template" { pattern
-{P,         SUBS,     PART1,     INDX1, PART2,     INDX2, PART3,     INDX3, PART4,     INDX4}
-{Cryo-HeVol CstatV    MagIns     -1     MagIns     -2     MagIns     -3    CstatV-VBox ""   }
-{Cryo-HeVol CM        CM-VBox    ""     CM-CM      ""     ""         ""    "" 	       ""   }
+{P}
+{Cryo-HeVol}
 }
 
 # VOL - total volume [m3]

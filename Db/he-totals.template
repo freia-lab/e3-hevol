@@ -1,50 +1,197 @@
-record (calc, "$(P):$(SUBS):VolLHe") {
+# CstatV - magnet insert
+#########################
+
+  record (calc, "$(P):CstatV:VolLHe") {
   field(EGU, "m3")
   field(PREC, 3)
   field(SCAN, "10 second")
-  field(INPA, "$(P):$(PART1):VolLHe$(INDX1)")
-  field(INPB, "$(P):$(PART2):VolLHe$(INDX2)")
-  field(INPC, "$(P):$(PART3):VolLHe$(INDX3)")
-  field(INPD, "$(P):$(PART4):VolLHe$(INDX4)")
+  field(PHAS, "2")
+  field(INPA, "$(P):MagIns:VolLHe-1")
+  field(INPB, "$(P):MagIns:VolLHe-2")
+  field(INPC, "$(P):MagIns:VolLHe-3")
+  field(INPD, "$(P):CstatV-VBox:VolLHe")
   field(CALC, "A+B+C+D")
+  field(FLNK, "$(P):CstatV:VolGHe")
 }
-record (calc, "$(P):$(SUBS):VolGHe") {
+record (calc, "$(P):CstatV:VolGHe") {
   field(EGU, "m3")
   field(PREC, 3)
-  field(SCAN, "10 second")
-  field(INPA, "$(P):$(PART1):VolGHe$(INDX1)")
-  field(INPB, "$(P):$(PART2):VolGHe$(INDX2)")
-  field(INPC, "$(P):$(PART3):VolGHe$(INDX3)")
-  field(INPD, "$(P):$(PART4):VolGHe$(INDX4)")
+  field(INPA, "$(P):MagIns:VolGHe-1")
+  field(INPB, "$(P):MagIns:VolGHe-2")
+  field(INPC, "$(P):MagIns:VolGHe-3")
+  field(INPD, "$(P):CstatV-VBox:VolGHe")
   field(CALC, "A+B+C+D")
+  field(FLNK, "$(P):CstatV:MassLHe")
 }
 
-record (calc, "$(P):$(SUBS):MassLHe") {
+record (calc, "$(P):CstatV:MassLHe") {
   field(EGU, "kg")
   field(PREC, 1)
-  field(SCAN, "10 second")
-  field(INPA, "$(P):$(PART1):MassLHe$(INDX1)")
-  field(INPB, "$(P):$(PART2):MassLHe$(INDX2)")
-  field(INPC, "$(P):$(PART3):MassLHe$(INDX3)")
-  field(INPD, "$(P):$(PART4):MassLHe$(INDX4)")
+  field(INPA, "$(P):MagIns:MassLHe-1")
+  field(INPB, "$(P):MagIns:MassLHe-2")
+  field(INPC, "$(P):MagIns:MassLHe-3")
+  field(INPD, "$(P):CstatV-VBox:MassLHe")
   field(CALC, "A+B+C+D")
+  field(FLNK, "$(P):CstatV:MassGHe")
 }
-record (calc, "$(P):$(SUBS):MassGHe") {
+record (calc, "$(P):CstatV:MassGHe") {
   field(EGU, "kg")
   field(PREC, 1)
-  field(SCAN, "10 second")
-  field(INPA, "$(P):$(PART1):MassGHe$(INDX1)")
-  field(INPB, "$(P):$(PART2):MassGHe$(INDX2)")
-  field(INPC, "$(P):$(PART3):MassGHe$(INDX3)")
-  field(INPD, "$(P):$(PART4):MassGHe$(INDX4)")
+  field(INPA, "$(P):MagIns:MassGHe-1")
+  field(INPB, "$(P):MagIns:MassGHe-2")
+  field(INPC, "$(P):MagIns:MassGHe-3")
+  field(INPD, "$(P):CstatV-VBox:MassGHe")
   field(CALC, "A+B+C+D")
+  field(FLNK, "$(P):CstatV:MassHe")
 }
-record (calc, "$(P):$(SUBS):MassHe") {
+record (calc, "$(P):CstatV:MassHe") {
   field(EGU, "kg")
   field(PREC, 1)
-  field(SCAN, "10 second")
-  field(INPA, "$(P):$(SUBS):MassLHe")
-  field(INPB, "$(P):$(SUBS):MassGHe")
+  field(INPA, "$(P):CstatV:MassLHe")
+  field(INPB, "$(P):CstatV:MassGHe")
   field(CALC, "A+B")
 }
 
+# Cryomodule  
+########################################
+
+record (calc, "$(P):CM:VolLHe") {
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(SCAN, "10 second")
+  field(PHAS, "1")
+  field(INPA, "$(P):CM-VBox:VolLHe")
+  field(INPB, "$(P):CM-CM:VolLHe")
+  field(CALC, "A+B")
+  field(FLNK, "$(P):CM:VolGHe")
+}
+record (calc, "$(P):CM:VolGHe") {
+  field(EGU, "m3")
+  field(PREC, 3)
+  field(INPA, "$(P):CM-VBox:VolGHe")
+  field(INPB, "$(P):CM-CM:VolGHe")
+  field(CALC, "A+B")
+  field(FLNK, "$(P):CM:MassLHe")
+}
+
+record (calc, "$(P):CM:MassLHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):CM-VBox:MassLHe")
+  field(INPB, "$(P):CM-CM:MassLHe")
+  field(CALC, "A+B")
+  field(FLNK, "$(P):CM:MassGHe")
+}
+record (calc, "$(P):CM:MassGHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):CM-VBox:MassGHe")
+  field(INPB, "$(P):CM-CM:MassGHe")
+  field(CALC, "A+B")
+  field(FLNK, "$(P):CM:MassHe")
+}
+record (calc, "$(P):CM:MassHe") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):CM:MassLHe")
+  field(INPB, "$(P):CM:MassGHe")
+  field(CALC, "A+B")
+}
+
+#######################################
+# TOTALS
+######################################
+
+record (fanout, "$(P):Ctrl:Totals-fanout") {
+  field(SCAN, "10 second")
+  field(PHAS, 3)
+  field(LNK1, "$(P):Total:MassGHe-calc")
+  field(LNK2, "$(P):Total:MassLHe-calc")
+  field(LNK3, "$(P):Total:MassHe-calc")
+#  field(LNK4, 
+#  field(LNK5, 
+}
+
+record (calcout, "$(P):Total:MassGHe-calc") {
+  field(DESC, "Total mass of helium in gas phase")
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "Cryo-HeVol:BufTank:MassGHe")
+  field(INPB, "Cryo-HeVol:HPstorage:MassGHe")
+  field(INPC, "Cryo-HeVol:GasBag:MassGHe")
+  field(INPD, "Cryo-HeVol:Dwr:MassGHe")
+  field(INPE, "Cryo-HeVol:CstatV:MassGHe")
+  field(INPF, "Cryo-HeVol:CM:MassGHe")
+  field(CALC, "A+B+C+D+E+F")
+  field(OUT, "$(P):Total:MassGHe PP")
+}
+
+record (ao, "$(P):Total:MassGHe") {
+  field(DESC, "Total mass of helium in gas phase")
+  field(PINI, YES)
+  field(EGU, "kg")
+  field(PREC, 1)
+}
+
+record (calcout, "$(P):Total:MassLHe-calc") {
+  field(DESC, "Total mass of helium in liquid phase")
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPD, "Cryo-HeVol:Dwr:MassLHe")
+  field(INPE, "Cryo-HeVol:CstatV:MassLHe")
+  field(INPF, "Cryo-HeVol:CM:MassLHe")
+  field(CALC, "D+E+F")
+  field(OUT, "$(P):Total:MassLHe PP")
+}
+
+record (ao, "$(P):Total:MassLHe") {
+  field(DESC, "Total mass of helium in liquid phase")
+  field(PINI, YES)
+  field(EGU, "kg")
+  field(PREC, 1)
+}
+
+record (calcout, "$(P):Total:MassHe-calc") {
+  field(DESC, "Total mass of helium in the system")
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "Cryo-HeVol:Total:MassLHe")
+  field(INPB, "Cryo-HeVol:Total:MassGHe")
+  field(CALC, "A+B")
+  field(OUT, "$(P):Total:MassHe PP")
+  field(FLNK, "$(P):CryoPlant:MassHe.PROC")
+}
+
+record (ao, "$(P):Total:MassHe") {
+  field(DESC, "Total mass of helium in the system")
+  field(PINI, YES)
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(FLNK, "$(P):Total:VolHeEquiv")
+}
+
+
+record (calc, "$(P):CryoPlant:MassHe") {
+  field(DESC, "Total mass of helium in the cryo plant")
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "Cryo-HeVol:Dwr:MassHe")
+  field(INPB, "Cryo-HeVol:HPstorage:MassGHe")
+  field(INPC, "Cryo-HeVol:BufTank:MassGHe")
+  field(INPD, "Cryo-HeVol:GasBag:MassGHe")
+  field(INPE, "Cryo-HeVol:D24:MassHe")
+  field(INPF, "Cryo-HeVol:D356:MassHe")
+  field(INPG, "Cryo-HeVol:D357:MassHe")
+  field(INPH, "Cryo-HeVol:D841:MassHe")
+  field(INPI, "Cryo-HeVol:D590:MassHe")
+  field(CALC, "A+B+C+D+E+F+G+H+I")
+}
+
+record (calc, "$(P):Total:VolHeEquiv") {
+  field(DESC, "Total mass as volume at 1 atm and 300K")
+  field(EGU, "m3")
+  field(PREC, 0)
+  field(INPA, "0.163")
+  field(INPB, "$(P):Total:MassHe")
+  field(CALC, "B/A")
+}

@@ -24,12 +24,12 @@ record (calc, "$(P):$(DEV):VolGHe$(N)") {
   field(INPA, "$(P):$(DEV):Vol$(N)")
   field(INPB, "$(P):$(DEV):VolLHe$(N)")
   field(CALC, "A-B")
+  field(FLNK, "$(P):$(DEV):MassLHe$(N)")
 }
 
 record (calc, "$(P):$(DEV):MassLHe$(N)") {
   field(EGU, "kg")
   field(PREC, 1)
-  field(SCAN, "10 second")
   field(INPA, "-1.1766")
   field(INPB, "6.1229")
   field(INPC, "-11.763")
