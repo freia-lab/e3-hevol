@@ -153,10 +153,13 @@ record (calc, "$(P):MagIns:VolLHe-1") {
   field(INPA, "$(P):Foam-1:VolGas")
   field(INPB, "$(P):Foam-2:VolGas")
   field(INPC, "$(P):Magnet:VolGas")
+  field(INPD, "$(P):Foam-1:Volume")
+  field(INPE, "$(P):Foam-2:Volume")
+  field(INPF, "$(P):Magnet:Volume")
   field(INPJ, "100.0")
   field(INPK, "$(P):MagIns:Vol-1")
   field(INPL, "CstatV-LHe:LI680:sRdV")
-  field(CALC, "L<0?0:(L>=100?K-A-B-C:K*L/J-A-B-C)")
+  field(CALC, "L<0?0:(L>=100?K-D-E-F:K*L/J-D+A-E+B-F+C)")
   field(FLNK, "$(P):MagIns:VolGHe-1")
 }
 
@@ -166,7 +169,10 @@ record (calc, "$(P):MagIns:VolGHe-1") {
   field(PREC, 3)
   field(INPA, "$(P):MagIns:Vol-1")
   field(INPB, "$(P):MagIns:VolLHe-1")
-  field(CALC, "A-B")
+  field(INPD, "$(P):Foam-1:Volume")
+  field(INPE, "$(P):Foam-2:Volume")
+  field(INPF, "$(P):Magnet:Volume")
+  field(CALC, "A-D-E-F-B")
 }
 
 record (calc, "$(P):MagIns:VolLHe-2") {
@@ -176,10 +182,11 @@ record (calc, "$(P):MagIns:VolLHe-2") {
   field(EGU, "m3")
   field(PREC, 3)
   field(INPA, "$(P):Foam-3:VolGas")
+  field(INPB, "$(P):Foam-3:Volume")
   field(INPJ, "100.0")
   field(INPK, "$(P):MagIns:Vol-2")
   field(INPL, "CstatV-LHe:LT682:sRdV")
-  field(CALC, "L<0?0:(L>=100?K-A:K*L/J-A)")
+  field(CALC, "L<0?0:(L>=100?K-B:K*L/J-B+A)")
   field(FLNK, "$(P):MagIns:VolGHe-2")
 }
 
@@ -189,7 +196,8 @@ record (calc, "$(P):MagIns:VolGHe-2") {
   field(PREC, 3)
   field(INPA, "$(P):MagIns:Vol-2")
   field(INPB, "$(P):MagIns:VolLHe-2")
-  field(CALC, "A-B")
+  field(INPC, "$(P):Foam-3:Volume")
+  field(CALC, "A-C-B")
 }
 
 # He mass below the lambda plate

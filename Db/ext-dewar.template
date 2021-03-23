@@ -106,4 +106,16 @@ record (calc, "$(P):$(DEV):dMassHe") {
   field(INPK, "1000.0")
   field(INPL, "$(P):$(DEV):InOut")
   field(CALC, "I=1?0:(A*(K^2)+B*K+C)*L/1000.0+J")
+  field(FLNK,  "$(P):$(DEV):VolLHe_Lt-calc")
+}
+
+record (calcout, "$(P):$(DEV):VolLHe_Lt-calc") {
+  field(DOPT, "Use OCAL")
+  field(OOPT, "When Non-zero")
+  field(INPA, "$(P):$(DEV):InOut")
+  field(INPB, "$(P):$(DEV):Vol") 
+  field(SDIS, "$(P):$(DEV):InOut-Rst")
+  field(OUT, "$(P):$(DEV):VolLHe_Lt.VAL CA") 
+  field(OCAL, "A<0?0:MIN(A,B*1000.0)")
+  field(CALC, "A")
 }
