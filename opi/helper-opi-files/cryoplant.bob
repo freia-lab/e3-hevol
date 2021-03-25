@@ -66,7 +66,7 @@
       </macros>
       <file>../Embedded/GHe-panel.bob</file>
       <width>290</width>
-      <height>160</height>
+      <height>149</height>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_2</name>
@@ -80,6 +80,19 @@
       <x>169</x>
       <y>179</y>
       <width>60</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>LHe Equivalent:</text>
+      <x>12</x>
+      <y>149</y>
+      <width>130</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P):$(DEV):LHeEquiv</pv_name>
+      <x>169</x>
+      <y>149</y>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">

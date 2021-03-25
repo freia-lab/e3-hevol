@@ -108,6 +108,20 @@ record (calc, "$(P):HPstorage:MassGHe") {
   field(INPK,"Cryo-CBox:Pur:PI3404")
   field(INPL, "$(P):HPstorage:VolGHe")
   field(CALC, "L*K*C")
+  field(FLNK, "$(P):HPstorage:LHeEquiv")
+}
+
+record (calc, "$(P):HPstorage:LHeEquiv") {
+  field(DESC, "LHe equivalent (4.25K, 1 bar)")
+  field(SCAN, "10 second")
+  field(EGU, "l")
+  field(PREC, 0)
+#  field(INPA,"1000")
+#  field(INPB,"273.15")
+  field(INPC, "0.1244")
+#  field(INPJ,"Env-Container:TT001:sRdV")
+  field(INPL, "$(P):HPstorage:MassGHe")
+  field(CALC, "L/C")
 }
 
 # PVs for He balance calculations
