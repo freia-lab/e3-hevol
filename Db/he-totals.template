@@ -2,7 +2,7 @@
 #########################
 
   record (calc, "$(P):CstatV:VolLHe") {
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(SCAN, "10 second")
   field(PHAS, "2")
@@ -14,7 +14,7 @@
   field(FLNK, "$(P):CstatV:VolGHe")
 }
 record (calc, "$(P):CstatV:VolGHe") {
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(P):MagIns:VolGHe-1")
   field(INPB, "$(P):MagIns:VolGHe-2")
@@ -56,7 +56,7 @@ record (calc, "$(P):CstatV:MassHe") {
 ########################################
 
 record (calc, "$(P):CM:VolLHe") {
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(SCAN, "10 second")
   field(PHAS, "1")
@@ -66,7 +66,7 @@ record (calc, "$(P):CM:VolLHe") {
   field(FLNK, "$(P):CM:VolGHe")
 }
 record (calc, "$(P):CM:VolGHe") {
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(P):CM-VBox:VolGHe")
   field(INPB, "$(P):CM-CM:VolGHe")
@@ -190,7 +190,7 @@ record (calc, "$(P):CryoPlant:MassHe") {
 
 record (calc, "$(P):Total:VolHeEquiv") {
   field(DESC, "Total mass as volume at 1 atm and 300K")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 0)
   field(INPA, "0.163")
   field(INPB, "$(P):Total:MassHe")

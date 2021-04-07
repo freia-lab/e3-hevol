@@ -1,18 +1,18 @@
 record (longin, "$(P):ReturnCnt") {
-  field(DESC, "Returned GHe 1 count per 0.1 m3")
+  field(DESC, "Returned GHe 1 count per 0.1 m³")
   field (SCAN, "10 second")
   field (INP, "HeliumVolume:In")
 }
 record (ao, "$(P):MagIns:Vol-1") {
   field(DESC, "Volume below the lambda plate")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(VAL, "2.649")
   field(PINI, "YES")
 }
 record (ao, "$(P):MagIns:Vol-2") {
   field(DESC, "Volume above the lambda plate")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(VAL, "0.607")
   field(PINI, "YES")
@@ -22,7 +22,7 @@ record (ao, "$(P):MagIns:Vol-2") {
 #########################
 record (ao, "$(P):GasBag:Vol") {
   field(DESC, "Max volume of the GasBag")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(VAL, "100")
   field(PINI, "YES")
@@ -31,7 +31,7 @@ record (ao, "$(P):GasBag:Vol") {
 record (calc, "$(P):GasBag:VolGHe") {
   field(DESC, "GHe volume in the gas bag")
   field(SCAN, "10 second")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "70")
   field(INPB, "400")
@@ -56,7 +56,7 @@ record (calc, "$(P):GasBag:MassGHe") {
 #################################
 record (ao, "$(P):BufTank:VolGHe") {
   field(DESC, "GHe volume of the buffer tank")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(VAL, "30")
   field(PINI, "YES")
@@ -89,7 +89,7 @@ record (longout, "$(P):HPstorage:Bundles") {
 
 record (calc, "$(P):HPstorage:VolGHe") {
   field(DESC, "GHe volume of the HP storage")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA,"$(P):HPstorage:Bundles")
   field(INPB,"0.6")
@@ -136,7 +136,7 @@ record (calcout, "$(P):HPstorage:InOut-Rst") {
 
 record (ao, "$(P):HPstorage:InOut") {
   field(DESC, "Adding/removing from the cryo system")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(DOL, "$(P):Ctrl:Zero")
   field(UDFS, NO_ALARM)
   field(FLNK, "$(P):HPstorage:dMassHe.PROC")
@@ -162,7 +162,7 @@ record (calc, "$(P):MagIns:VolLHe-1") {
   field(DESC, "LHe volume below lambda plate")
   field(SCAN, "10 second")
   field(PHAS, "0")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(P):Foam-1:VolGas")
   field(INPB, "$(P):Foam-2:VolGas")
@@ -179,7 +179,7 @@ record (calc, "$(P):MagIns:VolLHe-1") {
 
 record (calc, "$(P):MagIns:VolGHe-1") {
   field(DESC, "GHe volume below lambda plate")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(P):MagIns:Vol-1")
   field(INPB, "$(P):MagIns:VolLHe-1")
@@ -193,7 +193,7 @@ record (calc, "$(P):MagIns:VolLHe-2") {
   field(DESC, "LHe volume above lambda plate")
   field(SCAN, "10 second")
   field(PHAS, "0")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(P):Foam-3:VolGas")
   field(INPB, "$(P):Foam-3:Volume")
@@ -206,7 +206,7 @@ record (calc, "$(P):MagIns:VolLHe-2") {
 
 record (calc, "$(P):MagIns:VolGHe-2") {
   field(DESC, "GHe volume above lambda plate")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(P):MagIns:Vol-2")
   field(INPB, "$(P):MagIns:VolLHe-2")

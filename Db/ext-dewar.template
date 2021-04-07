@@ -7,7 +7,7 @@ record (ao, "$(P):$(DEV):VolLHe_Lt") {
 
 record (ao, "$(P):$(DEV):Vol") {
   field(DESC, "Volume of $(DEV_STR)")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(VAL, "$(VOL)")
   field(PINI, "YES")
@@ -16,7 +16,7 @@ record (ao, "$(P):$(DEV):Vol") {
 record (calc, "$(P):$(DEV):VolLHe") {
   field(SCAN, "10 second")
   field(PHAS, "1")
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(ACT_VOL_L)")
   field(CALC, "A/1000")
@@ -24,7 +24,7 @@ record (calc, "$(P):$(DEV):VolLHe") {
 }
 
 record (calc, "$(P):$(DEV):VolGHe") {
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(ACT_VOL_L)")
   field(INPB, "$(P):$(DEV):Vol")

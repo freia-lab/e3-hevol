@@ -24,7 +24,7 @@ file "he-vessel.template" { pattern
 {P,         DEV,         N     DEV_STR,              LI,                   LI_MAX,  VOL,   LHE_TT,                GHE_TT,               PT,                     LHE_VOL_CALC}
 {Cryo-HeVol MagIns  	 "-3"  "HX683" 		     CstatV-LHe:LT683:sRdV 100	    0.004  CstatV-LHe:TT668M:sRdV CstatV-LHe:TT685:sRdV CstatV-LHe:PT660M:sRdV  "L<0?0:(L>=J?K:K*L/J)"}
 {Cryo-HeVol CstatV-VBox  ""    "Gersemi's valve box" CstatV-LHe:LT600:sRdV 100	    0.071  CstatV-LHe:TT613:sRdV  CstatV-LHe:TT603:sRdV CstatV-LHe:PT600:sRdV   "L<0?0:(L>=J?K:K*L/J)"}
-{Cryo-HeVol CM-VBox    	 ""    "CM's valve box"      CM-VBox:LT03:sRdV     74	    0.015  CM-VBox:TT95:sRdV      CM-VBox:TT01:sRdV  	CstatH-RHtr:PT550:sRdV  "L<0?0:(L>=J?K:K*L/J)"}
+{Cryo-HeVol CM-VBox    	 ""    "CM's valve box"      CM-VBox:LT03:sRdV     74	    0.015  4.5      CM-VBox:TT01:sRdV  	CstatH-RHtr:PT550:sRdV  "L<0?0:(L>=J?K:K*L/J)"}
 {Cryo-HeVol CM-CM    	 ""    "Cryomodule"          CM-CM:LT01:sRdV       68	    0.122  CM-CM:TT04:sRdV	  CM-CM:TT09:sRdV    	CM-CM:PT03:sRdV         "L<0?0:(L>=J?K:(L<52?2.23e-3*L:(L-52)*3.75e-4+0.116))"}
 }
 
@@ -33,7 +33,7 @@ file "he-totals.template" { pattern
 {Cryo-HeVol}
 }
 
-# VOL - total volume [m3]
+# VOL - total volume [m³]
 # ACT_VOL_L - actual volume of LHe [l]
 # PT - pressure in the dewar [bar]
 file "dewar.template" { pattern

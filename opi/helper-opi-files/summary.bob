@@ -252,6 +252,7 @@
         <name>Text Update_8</name>
         <pv_name>$(P):$(DEV):dMassHe</pv_name>
         <x>160</x>
+        <horizontal_alignment>2</horizontal_alignment>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label</name>
@@ -302,6 +303,7 @@
         <name>Text Update_9</name>
         <pv_name>$(P):$(DEV):dMassHe</pv_name>
         <x>160</x>
+        <horizontal_alignment>2</horizontal_alignment>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label_10</name>
@@ -332,6 +334,7 @@
         <name>Text Update_10</name>
         <pv_name>$(P):$(DEV):dMassHe</pv_name>
         <x>160</x>
+        <horizontal_alignment>2</horizontal_alignment>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label_11</name>
@@ -362,6 +365,7 @@
         <name>Text Update_13</name>
         <pv_name>$(P):$(DEV):dMassHe</pv_name>
         <x>160</x>
+        <horizontal_alignment>2</horizontal_alignment>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label_12</name>
@@ -392,6 +396,7 @@
         <name>Text Update_14</name>
         <pv_name>$(P):$(DEV):dMassHe</pv_name>
         <x>160</x>
+        <horizontal_alignment>2</horizontal_alignment>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label_13</name>
@@ -422,6 +427,7 @@
         <name>Text Update_16</name>
         <pv_name>$(P):$(DEV):dMassHe</pv_name>
         <x>160</x>
+        <horizontal_alignment>2</horizontal_alignment>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label_15</name>

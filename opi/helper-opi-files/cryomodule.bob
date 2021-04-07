@@ -20,7 +20,7 @@
         <N></N>
         <PT>CstatH-RHtr:PT550:sRdV</PT>
         <TT_GHE>CM-VBox:TT01:sRdV</TT_GHE>
-        <TT_LHE>CM-VBox:TT01:sRdV</TT_LHE>
+        <TT_LHE>Cryo-HeVol:CM-VBox:MassLHe.INPK</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
       <width>290</width>

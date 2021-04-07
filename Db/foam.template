@@ -41,7 +41,7 @@ record (ao, "$(P):$(FILLER):OuterDiam") {
 }
 
 record (calc, "$(P):$(FILLER):Volume") {
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(P):$(FILLER):Height")
   field(INPB, "$(P):$(FILLER):InnerDiam")
@@ -50,12 +50,12 @@ record (calc, "$(P):$(FILLER):Volume") {
   field(CALC, "(C-B)*(C-B)*A*L/4000000")
 }
 
-# INPA - total volume [m3]
+# INPA - total volume [m³]
 # INPB - Bottom pos [%] of $(LI)
 # INPC - Height in [%] of $(LI)
 
 record(calc, "$(P):$(FILLER):VolGas") {
-  field(EGU, "m3")
+  field(EGU, "m³")
   field(PREC, 3)
   field(SCAN, "2 second")
   field(INPA, "$(P):$(FILLER):Volume")
