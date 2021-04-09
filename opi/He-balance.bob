@@ -2,7 +2,7 @@
 <display version="2.0.0">
   <name>HeBalance</name>
   <macros>
-    <P>Cryo-HeVol</P>
+    <PREFIX>Cryo-HeVol</PREFIX>
   </macros>
   <width>1600</width>
   <height>1200</height>
@@ -34,6 +34,7 @@
         <name>Summary</name>
         <file>helper-opi-files/summary.bob</file>
         <macros>
+          <P>$(PREFIX)</P>
         </macros>
         <group_name></group_name>
       </tab>
@@ -41,6 +42,7 @@
         <name>Cryo Plant</name>
         <file>helper-opi-files/cryoplant.bob</file>
         <macros>
+          <P>$(PREFIX)</P>
         </macros>
         <group_name></group_name>
       </tab>
@@ -48,6 +50,7 @@
         <name>Gersemi</name>
         <file>helper-opi-files/Gersemi.bob</file>
         <macros>
+          <P>$(PREFIX)</P>
         </macros>
         <group_name></group_name>
       </tab>
@@ -55,6 +58,7 @@
         <name>Cryomodule</name>
         <file>helper-opi-files/cryomodule.bob</file>
         <macros>
+          <P>$(PREFIX)</P>
         </macros>
         <group_name></group_name>
       </tab>

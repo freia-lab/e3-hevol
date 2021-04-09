@@ -14,7 +14,9 @@
     <file>../Embedded/foam.bob</file>
     <x>20</x>
     <y>760</y>
-    <height>260</height>
+    <width>410</width>
+    <height>270</height>
+    <transparent>true</transparent>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_1</name>
@@ -24,7 +26,9 @@
     <file>../Embedded/foam.bob</file>
     <x>20</x>
     <y>510</y>
-    <height>260</height>
+    <width>410</width>
+    <height>280</height>
+    <transparent>true</transparent>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_3</name>
@@ -34,7 +38,8 @@
     <file>../Embedded/foam.bob</file>
     <x>20</x>
     <y>10</y>
-    <height>260</height>
+    <width>410</width>
+    <height>330</height>
   </widget>
   <widget type="group" version="2.0.0">
     <name>  The insert  </name>
@@ -152,7 +157,7 @@
       <name>Label_43</name>
       <text>LHe + GHe</text>
       <y>190</y>
-      <width>161</width>
+      <width>200</width>
       <height>48</height>
       <font>
         <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">

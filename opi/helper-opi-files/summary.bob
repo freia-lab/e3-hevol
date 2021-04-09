@@ -108,7 +108,7 @@
     <text>Cryo plant:</text>
     <x>500</x>
     <y>20</y>
-    <width>180</width>
+    <width>200</width>
     <height>50</height>
     <font>
       <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
@@ -120,7 +120,7 @@
     <text>Gersemi:</text>
     <x>500</x>
     <y>80</y>
-    <width>180</width>
+    <width>200</width>
     <height>50</height>
     <font>
       <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
@@ -132,7 +132,7 @@
     <text>CM:</text>
     <x>500</x>
     <y>140</y>
-    <width>180</width>
+    <width>200</width>
     <height>50</height>
     <font>
       <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
@@ -144,7 +144,7 @@
     <text>HNOSS:</text>
     <x>500</x>
     <y>200</y>
-    <width>180</width>
+    <width>200</width>
     <height>50</height>
     <font>
       <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
@@ -154,7 +154,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
     <pv_name>$(P):CryoPlant:MassHe</pv_name>
-    <x>690</x>
+    <x>710</x>
     <y>20</y>
     <width>180</width>
     <height>50</height>
@@ -167,7 +167,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_5</name>
     <pv_name>$(P):CstatV:MassHe</pv_name>
-    <x>690</x>
+    <x>710</x>
     <y>80</y>
     <width>180</width>
     <height>50</height>
@@ -180,7 +180,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_6</name>
     <pv_name>$(P):CM:MassHe</pv_name>
-    <x>690</x>
+    <x>710</x>
     <y>140</y>
     <width>180</width>
     <height>50</height>
@@ -190,24 +190,12 @@
     </font>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_7</name>
-    <x>690</x>
-    <y>200</y>
-    <width>180</width>
-    <height>50</height>
-    <font>
-      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
-      </font>
-    </font>
-    <horizontal_alignment>2</horizontal_alignment>
-  </widget>
   <widget type="group" version="2.0.0">
-    <name>He Balance Sheet</name>
+    <name>  He Balance Sheet  </name>
     <x>20</x>
     <y>300</y>
     <width>337</width>
-    <height>432</height>
+    <height>442</height>
     <foreground_color>
       <color name="BLUE-BORDER" red="47" green="135" blue="148">
       </color>
@@ -226,8 +214,8 @@
         </action>
       </actions>
       <pv_name>$(P):Ctrl:Reset</pv_name>
-      <x>25</x>
-      <y>320</y>
+      <x>24</x>
+      <y>329</y>
       <width>140</width>
       <tooltip>$(actions)</tooltip>
     </widget>
@@ -236,8 +224,8 @@
       <macros>
         <DEV>D24</DEV>
       </macros>
-      <x>35</x>
-      <y>90</y>
+      <x>34</x>
+      <y>99</y>
       <width>260</width>
       <height>25</height>
       <style>3</style>
@@ -265,8 +253,8 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_11</name>
       <pv_name>$(P):Ctrl:ResetTime</pv_name>
-      <x>135</x>
-      <y>360</y>
+      <x>134</x>
+      <y>369</y>
       <width>160</width>
       <height>30</height>
       <font>
@@ -279,7 +267,8 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_12</name>
       <pv_name>$(P):Total-0:MassHe</pv_name>
-      <x>195</x>
+      <x>194</x>
+      <y>9</y>
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
     <widget type="group" version="2.0.0">
@@ -287,8 +276,8 @@
       <macros>
         <DEV>D356</DEV>
       </macros>
-      <x>35</x>
-      <y>120</y>
+      <x>34</x>
+      <y>129</y>
       <width>260</width>
       <height>25</height>
       <style>3</style>
@@ -318,8 +307,8 @@
       <macros>
         <DEV>D357</DEV>
       </macros>
-      <x>35</x>
-      <y>150</y>
+      <x>34</x>
+      <y>159</y>
       <width>260</width>
       <height>25</height>
       <style>3</style>
@@ -349,8 +338,8 @@
       <macros>
         <DEV>D841</DEV>
       </macros>
-      <x>35</x>
-      <y>180</y>
+      <x>34</x>
+      <y>189</y>
       <width>260</width>
       <height>25</height>
       <style>3</style>
@@ -380,8 +369,8 @@
       <macros>
         <DEV>D590</DEV>
       </macros>
-      <x>35</x>
-      <y>210</y>
+      <x>34</x>
+      <y>219</y>
       <width>260</width>
       <height>25</height>
       <style>3</style>
@@ -411,8 +400,8 @@
       <macros>
         <DEV>HPstorage</DEV>
       </macros>
-      <x>35</x>
-      <y>240</y>
+      <x>34</x>
+      <y>249</y>
       <width>260</width>
       <height>25</height>
       <style>3</style>
@@ -440,29 +429,29 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_17</name>
       <pv_name>$(P):Total:MassHe</pv_name>
-      <x>195</x>
-      <y>30</y>
+      <x>194</x>
+      <y>39</y>
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_18</name>
       <pv_name>$(P):GHeRet:dMassHe</pv_name>
-      <x>195</x>
-      <y>60</y>
+      <x>194</x>
+      <y>69</y>
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_19</name>
       <pv_name>$(P):Losses:dMassHe</pv_name>
-      <x>195</x>
-      <y>280</y>
+      <x>194</x>
+      <y>289</y>
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_16</name>
       <text>Last reset on</text>
-      <x>35</x>
-      <y>360</y>
+      <x>34</x>
+      <y>369</y>
       <height>30</height>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -473,34 +462,36 @@
     <widget type="label" version="2.0.0">
       <name>Label_17</name>
       <text>Current He amount:</text>
-      <x>15</x>
-      <y>30</y>
+      <x>14</x>
+      <y>39</y>
       <width>150</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_18</name>
       <text>He amount at Reset:</text>
-      <x>15</x>
+      <x>14</x>
+      <y>9</y>
       <width>150</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_19</name>
       <text>GHe return since Reset:</text>
-      <x>15</x>
-      <y>60</y>
+      <x>14</x>
+      <y>69</y>
       <width>160</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_20</name>
       <text>Losses since Reset:</text>
-      <x>45</x>
-      <y>280</y>
+      <x>44</x>
+      <y>289</y>
       <width>130</width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_22</name>
       <text>+</text>
-      <y>60</y>
+      <x>-1</x>
+      <y>69</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -511,7 +502,8 @@
     <widget type="label" version="2.0.0">
       <name>Label_23</name>
       <text>+</text>
-      <y>90</y>
+      <x>-1</x>
+      <y>99</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -522,7 +514,8 @@
     <widget type="label" version="2.0.0">
       <name>Label_24</name>
       <text>+</text>
-      <y>150</y>
+      <x>-1</x>
+      <y>159</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -533,7 +526,8 @@
     <widget type="label" version="2.0.0">
       <name>Label_25</name>
       <text>+</text>
-      <y>120</y>
+      <x>-1</x>
+      <y>129</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -544,7 +538,8 @@
     <widget type="label" version="2.0.0">
       <name>Label_26</name>
       <text>+</text>
-      <y>180</y>
+      <x>-1</x>
+      <y>189</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -555,7 +550,8 @@
     <widget type="label" version="2.0.0">
       <name>Label_27</name>
       <text>+</text>
-      <y>210</y>
+      <x>-1</x>
+      <y>219</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -566,7 +562,8 @@
     <widget type="label" version="2.0.0">
       <name>Label_28</name>
       <text>+</text>
-      <y>240</y>
+      <x>-1</x>
+      <y>249</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -577,7 +574,8 @@
     <widget type="label" version="2.0.0">
       <name>Label_29</name>
       <text>-</text>
-      <y>30</y>
+      <x>-1</x>
+      <y>39</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -588,7 +586,8 @@
     <widget type="label" version="2.0.0">
       <name>Label_30</name>
       <text>=</text>
-      <y>280</y>
+      <x>-1</x>
+      <y>289</y>
       <width>20</width>
       <font>
         <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">

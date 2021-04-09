@@ -63,4 +63,13 @@ record(calc, "$(P):$(FILLER):VolGas") {
   field(INPC, "$(P):$(FILLER):HeightPerCnt")
   field(INPK, "CstatV-LHe:$(LI):sRdV")
   field(CALC, "K<B?A:(K>=(B+C)?0:A*(B+C-K)/C)")
+  field(FLNK, "$(P):$(FILLER):VolLHe")
+}
+
+record(calc, "$(P):$(FILLER):VolLHe") {
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(INPA, "$(P):$(FILLER):Volume")
+  field(INPB, "$(P):$(FILLER):VolGas")
+  field(CALC, "A-B")
 }
