@@ -38,9 +38,10 @@ record (calc, "$(P):$(DEV):MassLHe") {
   field(INPA, "-2.2e-6")
   field(INPB, "-0.01596")
   field(INPC, "143.59")
+  field(INPD, "1000.0")
   field(INPK, "$(PT)")
   field(INPL, "$(P):$(DEV):VolLHe")
-  field(CALC, "(A*(K^2)+B*K+C)*L")
+  field(CALC, "(A*((K*D)^2)+B*K*D+C)*L")
   field(FLNK, "$(P):$(DEV):MassGHe")
 }
 
@@ -50,9 +51,11 @@ record (calc, "$(P):$(DEV):MassGHe") {
   field(INPA, "3.6341e-6")
   field(INPB, "9.9234e-3")
   field(INPC, "2.8838")
-  field(INPK, "Cryo-CBox:LP:PI3290")
+  field(INPD, "1000.0")
+  field(INPJ, "$(P):$(DEV):VolLHe")
+  field(INPK, "$(PT)")
   field(INPL, "$(P):$(DEV):VolGHe")
-  field(CALC, "(A*(K^2)+B*K+C)*L")
+  field(CALC, "J>0?(A*((K*D)^2)+B*K*D+C)*L:0")
   field(FLNK, "$(P):$(DEV):MassHe")
 }
 
