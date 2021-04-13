@@ -123,7 +123,12 @@ record (calcout, "$(P):Total:MassGHe-calc") {
   field(INPD, "Cryo-HeVol:Dwr:MassGHe")
   field(INPE, "Cryo-HeVol:CstatV:MassGHe")
   field(INPF, "Cryo-HeVol:CM:MassGHe")
-  field(CALC, "A+B+C+D+E+F")
+  field(INPG, "Cryo-HeVol:D24:MassGHe")
+  field(INPH, "Cryo-HeVol:D356:MassGHe")
+  field(INPI, "Cryo-HeVol:D357:MassGHe")
+  field(INPJ, "Cryo-HeVol:D841:MassGHe")
+  field(INPK, "Cryo-HeVol:D590:MassGHe")
+  field(CALC, "A+B+C+D+E+F+G+H+I+J+K")
   field(OUT, "$(P):Total:MassGHe PP")
 }
 
@@ -141,7 +146,12 @@ record (calcout, "$(P):Total:MassLHe-calc") {
   field(INPD, "Cryo-HeVol:Dwr:MassLHe")
   field(INPE, "Cryo-HeVol:CstatV:MassLHe")
   field(INPF, "Cryo-HeVol:CM:MassLHe")
-  field(CALC, "D+E+F")
+  field(INPG, "Cryo-HeVol:D24:MassLHe")
+  field(INPH, "Cryo-HeVol:D356:MassLHe")
+  field(INPI, "Cryo-HeVol:D357:MassLHe")
+  field(INPJ, "Cryo-HeVol:D841:MassLHe")
+  field(INPK, "Cryo-HeVol:D590:MassLHe")
+  field(CALC, "D+E+F+G+H+I+J+K")
   field(OUT, "$(P):Total:MassLHe PP")
 }
 

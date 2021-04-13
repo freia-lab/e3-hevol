@@ -35,27 +35,25 @@ record (calc, "$(P):$(DEV):VolGHe") {
 record (calc, "$(P):$(DEV):MassLHe") {
   field(EGU, "kg")
   field(PREC, 1)
-  field(INPA, "-2.2e-6")
-  field(INPB, "-0.01596")
+  field(INPA, "-2.19995")
+  field(INPB, "-15.963")
   field(INPC, "143.59")
-  field(INPD, "1000.0")
   field(INPK, "$(PT)")
   field(INPL, "$(P):$(DEV):VolLHe")
-  field(CALC, "(A*((K*D)^2)+B*K*D+C)*L")
+  field(CALC, "(A*(K^2)+B*K+C)*L")
   field(FLNK, "$(P):$(DEV):MassGHe")
 }
 
 record (calc, "$(P):$(DEV):MassGHe") {
   field(EGU, "kg")
   field(PREC, 1)
-  field(INPA, "3.6341e-6")
-  field(INPB, "9.9234e-3")
-  field(INPC, "2.8838")
-  field(INPD, "1000.0")
+  field(INPD, "3.6341")
+  field(INPE, "9.9234")
+  field(INPF, "2.8838")
   field(INPJ, "$(P):$(DEV):VolLHe")
   field(INPK, "$(PT)")
   field(INPL, "$(P):$(DEV):VolGHe")
-  field(CALC, "J>0?(A*((K*D)^2)+B*K*D+C)*L:0")
+  field(CALC, "J>0?(D*(K^2)+E*K+F)*L:0")
   field(FLNK, "$(P):$(DEV):MassHe")
 }
 
@@ -101,16 +99,23 @@ record (calc, "$(P):$(DEV):dMassHe") {
   field(EGU, "kg")
   field(PREC, "1")
   field(PINI, YES)
-  field(INPA, "-2.2e-6")
-  field(INPB, "-0.01596")
+  field(INPA, "-2.19995")
+  field(INPB, "-15.963")
   field(INPC, "143.59")
+  field(INPD, "3.6341")
+  field(INPE, "9.9234")
+  field(INPF, "2.8838")
+  field(INPG, "$(VOL)")
+  field(INPH, "1000.0")
   field(INPI, "$(P):Ctrl:Reset")
   field(INPJ, "$(P):$(DEV):dMassHe")
-  field(INPK, "1000.0")
+  field(INPK, "$(PT)")
   field(INPL, "$(P):$(DEV):InOut")
-  field(CALC, "I=1?0:(A*(K^2)+B*K+C)*L/1000.0+J")
+#  field(CALC, "I=1?0:(A*(K^2)+B*K+C)*L/H+(L=0?0:(D*(K^2)+E*K+F)*(G-L/H))+J")
+  field(CALC, "I=1?0:(A*(K^2)+B*K+C)*L/H+(L=0?0:(D*(K^2)+E*K+F)*(L>0?G-L/H:-L/H-G))+J")
   field(FLNK,  "$(P):$(DEV):VolLHe_Lt-calc")
 }
+
 
 record (calcout, "$(P):$(DEV):VolLHe_Lt-calc") {
   field(DOPT, "Use OCAL")
