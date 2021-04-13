@@ -3,6 +3,7 @@ record (ao, "$(P):$(DEV):VolLHe_Lt") {
   field(EGU, "l")
   field(PREC, 1)
   field(PINI, YES)
+  field(FLNK, "$(P):$(DEV):VolLHe")
 }
 
 record (ao, "$(P):$(DEV):Vol") {
@@ -14,8 +15,8 @@ record (ao, "$(P):$(DEV):Vol") {
 }
 
 record (calc, "$(P):$(DEV):VolLHe") {
-  field(SCAN, "10 second")
-  field(PHAS, "1")
+#  field(SCAN, "10 second")
+#  field(PHAS, "1")
   field(EGU, "m³")
   field(PREC, 3)
   field(INPA, "$(ACT_VOL_L)")
