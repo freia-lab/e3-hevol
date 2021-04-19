@@ -91,18 +91,19 @@ record (ao, "$(P):BufTank:VolGHe") {
   field(PINI, "YES")
 }
 
+# GHe density at 300 K and 1 bar = 0.1598 kg/m3
 record (calc, "$(P):BufTank:MassGHe") {
   field(DESC, "GHe mass in the buffer tank")
   field(SCAN, "10 second")
   field(EGU, "kg")
   field(PREC, 1)
-#  field(INPA,"1000")
-#  field(INPB,"273.15")
-  field(INPC, "0.163")
-#  field(INPJ,"Env-Container:TT001:sRdV")
+  field(INPA,"300.0")
+  field(INPB,"273.15")
+  field(INPC, "0.1598")
+  field(INPJ,"Env-Container:TT001:sRdV")
   field(INPK,"Cryo-Cmp:HP:PI2170")
   field(INPL, "$(P):BufTank:VolGHe")
-  field(CALC, "L*K*C")
+  field(CALC, "L*K*C*A/(B+J)")
 }
 
 #########################
@@ -130,13 +131,13 @@ record (calc, "$(P):HPstorage:MassGHe") {
   field(SCAN, "10 second")
   field(EGU, "kg")
   field(PREC, 1)
-#  field(INPA,"1000")
-#  field(INPB,"273.15")
-  field(INPC, "0.163")
-#  field(INPJ,"Env-Container:TT001:sRdV")
+  field(INPA,"300.0")
+  field(INPB,"273.15")
+  field(INPC, "0.1598")
+  field(INPJ,"Env-Container:TT001:sRdV")
   field(INPK,"Cryo-CBox:Pur:PI3404")
   field(INPL, "$(P):HPstorage:VolGHe")
-  field(CALC, "L*K*C")
+  field(CALC, "L*K*C*A/(B+J)")
   field(FLNK, "$(P):HPstorage:LHeEquiv")
 }
 
@@ -176,12 +177,14 @@ record (calc, "$(P):HPstorage:dMassHe") {
   field(EGU, "kg")
   field(PREC, "1")
   field(PINI, YES)
-  field(INPA, "0.163")
+  field(INPA, "300.0")
+  field(INPB, "273.15")
+  field(INPC, "0.1598")
+  field(INPD, "Env-Container:TT001:sRdV")
   field(INPI, "$(P):Ctrl:Reset")
   field(INPJ, "$(P):HPstorage:dMassHe")
-  field(INPK, "1000.0")
   field(INPL, "$(P):HPstorage:InOut")
-  field(CALC, "I=1?0:A*L+J")
+  field(CALC, "I=1?0:L*C*A/(B+D)+J")
 }
 
 
