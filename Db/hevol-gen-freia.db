@@ -14,7 +14,36 @@ record (ao, "$(P):MagIns:Vol-2") {
   field(DESC, "Volume above the lambda plate")
   field(EGU, "m³")
   field(PREC, 3)
-  field(VAL, "0.607")
+  field(VAL, "0.712")
+  field(PINI, "YES")
+}
+record (ao, "$(P):MagIns:VolGHe-4") {
+  field(DESC, "Volume above LT683")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.155")
+  field(PINI, "YES")
+}
+
+record (ao, "$(P):MagIns:VolGHe-5") {
+  field(DESC, "Volume above 1st screen")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.347")
+  field(PINI, "YES")
+}
+record (ao, "$(P):MagIns:VolGHe-6") {
+  field(DESC, "Volume above 2nd screen")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.347")
+  field(PINI, "YES")
+}
+record (ao, "$(P):MagIns:VolGHe-7") {
+  field(DESC, "Volume above 3rd screen")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.262")
   field(PINI, "YES")
 }
 
@@ -157,6 +186,8 @@ record (calc, "$(P):HPstorage:dMassHe") {
 
 
 ##################################
+# Magnet Insert
+##################################
 
 record (calc, "$(P):MagIns:VolLHe-1") {
   field(DESC, "LHe volume below lambda plate")
@@ -271,10 +302,11 @@ record (calc, "$(P):MagIns:MassGHe-2") {
   field(PREC, 1)
   field(INPA, "58")
   field(INPB, "1013")
+  field(INPI, "$(P):MagIns:VolGHe-4")
   field(INPJ, "CstatV-LHe:PT680:sRdV")
-  field(INPK, "CstatV-LHe:TT669M:sRdV")
+  field(INPK, "4.2")
   field(INPL, "$(P):MagIns:VolGHe-2")
-  field(CALC, "(A/K*J/B)*L")
+  field(CALC, "(A/K*J/B)*(I+L)")
   field(FLNK, "$(P):MagIns:MassHe-2")
 }
 

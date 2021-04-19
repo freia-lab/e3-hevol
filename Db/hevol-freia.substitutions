@@ -12,7 +12,7 @@ file "foam.template" { pattern
 {Cryo-HeVol  Foam-1	      LI680	260}
 {Cryo-HeVol  Foam-2	      LI680	260}
 {Cryo-HeVol  Magnet	      LI680	260}
-{Cryo-HeVol  Foam-3	      LT682	57}
+{Cryo-HeVol  Foam-3	      LT682	57.5}
 }
 
 # CALC formula for calculating the LHe volume
