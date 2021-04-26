@@ -260,7 +260,7 @@ record (calc, "$(P):MagIns:MassLHe-1") {
   field(INPC, "125")
   field(INPK, "CstatV-LHe:TT663M:sRdV")
   field(INPL, "$(P):MagIns:VolLHe-1")
-  field(CALC, "(A*K*K+B*K+C)*L")
+  field(CALC, "K>5?0:(A*K*K+B*K+C)*L")
   field(FLNK, "$(P):MagIns:MassGHe-1")
 }
 
@@ -296,7 +296,7 @@ record (calc, "$(P):MagIns:MassLHe-2") {
   field(INPC, "125")
   field(INPK, "CstatV-LHe:TT668M:sRdV")
   field(INPL, "$(P):MagIns:VolLHe-2")
-  field(CALC, "(A*K*K+B*K+C)*L")
+  field(CALC, "K>5?0:(A*K*K+B*K+C)*L")
   field(FLNK, "$(P):MagIns:MassGHe-2")
 }
 
@@ -307,7 +307,7 @@ record (calc, "$(P):MagIns:MassGHe-2") {
   field(INPB, "1013")
   field(INPI, "$(P):MagIns:VolGHe-4")
   field(INPJ, "CstatV-LHe:PT680:sRdV")
-  field(INPK, "4.2")
+  field(INPK, "CstatV-LHe:TT669M:sRdV")
   field(INPL, "$(P):MagIns:VolGHe-2")
   field(CALC, "(A/K*J/B)*(I+L)")
   field(FLNK, "$(P):MagIns:MassHe-2")
