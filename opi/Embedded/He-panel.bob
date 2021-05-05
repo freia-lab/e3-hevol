@@ -43,46 +43,46 @@
     <name>Label_32</name>
     <text>LHe Temperature</text>
     <x>10</x>
-    <y>120</y>
+    <y>140</y>
     <width>130</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_31</name>
     <pv_name>$(TT_LHE)</pv_name>
     <x>170</x>
-    <y>120</y>
+    <y>140</y>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_33</name>
     <text>GHe Temperature</text>
     <x>10</x>
-    <y>150</y>
+    <y>170</y>
     <width>130</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_32</name>
     <pv_name>$(TT_GHE)</pv_name>
     <x>170</x>
-    <y>150</y>
+    <y>170</y>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_34</name>
     <text>Pressure</text>
     <x>10</x>
-    <y>190</y>
+    <y>205</y>
     <width>130</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_33</name>
     <pv_name>$(PT)</pv_name>
     <x>170</x>
-    <y>190</y>
+    <y>205</y>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_35</name>
     <text>Total He mass</text>
     <x>10</x>
-    <y>230</y>
+    <y>240</y>
     <width>130</width>
     <font>
       <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -93,7 +93,7 @@
     <name>Text Update_34</name>
     <pv_name>$(P):$(DEV):MassHe$(N)</pv_name>
     <x>170</x>
-    <y>230</y>
+    <y>240</y>
     <font>
       <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
       </font>
@@ -103,7 +103,7 @@
     <name>Label_36</name>
     <text>Total LHe mass</text>
     <x>10</x>
-    <y>260</y>
+    <y>270</y>
     <width>130</width>
     <font>
       <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -114,7 +114,7 @@
     <name>Text Update_35</name>
     <pv_name>$(P):$(DEV):MassLHe$(N)</pv_name>
     <x>170</x>
-    <y>260</y>
+    <y>270</y>
     <font>
       <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
       </font>
@@ -124,7 +124,7 @@
     <name>Label_37</name>
     <text>Total GHe mass</text>
     <x>10</x>
-    <y>290</y>
+    <y>300</y>
     <width>130</width>
     <font>
       <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
@@ -135,10 +135,24 @@
     <name>Text Update_36</name>
     <pv_name>$(P):$(DEV):MassGHe$(N)</pv_name>
     <x>170</x>
-    <y>290</y>
+    <y>300</y>
     <font>
       <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
       </font>
     </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_38</name>
+    <text>LHe Level</text>
+    <x>10</x>
+    <y>110</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_37</name>
+    <pv_name>$(LT_LHE)</pv_name>
+    <x>170</x>
+    <y>110</y>
+    <precision>1</precision>
   </widget>
 </display>

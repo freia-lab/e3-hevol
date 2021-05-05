@@ -77,6 +77,15 @@ record (calc, "$(P):$(DEV):TT-calc:sRdV") {
   field(CALC, "A*(K^2)+B*K+C")
 }
 
+record (calc, "$(P):$(DEV):LT-calc:sRdV") {
+  field(EGU, "%")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(INPA, "$(P):$(DEV):VolLHe_Lt")
+  field(INPB, "$(VOL)")
+  field(CALC, "0.1*A/B")
+}
+
 # PVs for He balance calculations
 ####################################
 

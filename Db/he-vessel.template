@@ -10,6 +10,7 @@ record (calc, "$(P):$(DEV):VolLHe$(N)") {
   field(SCAN, "10 second")
   field(EGU, "m³")
   field(PREC, 3)
+  field(INPG, "$(INSERT)")
   field(INPJ, "$(LI_MAX)")
   field(INPK, "$(P):$(DEV):Vol$(N)")
   field(INPL, "$(LI)")

@@ -17,6 +17,7 @@
       <name>Embedded Display_4</name>
       <macros>
         <DEV>CM-VBox</DEV>
+        <LT_LHE>CM-VBox:LT03:sRdV</LT_LHE>
         <N></N>
         <PT>CstatH-RHtr:PT550:sRdV</PT>
         <TT_GHE>CM-VBox:TT01:sRdV</TT_GHE>
@@ -38,6 +39,7 @@
       <name>Embedded Display_6</name>
       <macros>
         <DEV>CM-CM</DEV>
+        <LT_LHE>CM-CM:LT01:sRdV</LT_LHE>
         <N></N>
         <PT>CM-CM:PT03:sRdV</PT>
         <TT_GHE>CM-CM:TT06:sRdV</TT_GHE>
@@ -121,7 +123,7 @@
       <name>Label_43</name>
       <text>LHe + GHe</text>
       <y>190</y>
-      <width>190</width>
+      <width>161</width>
       <height>48</height>
       <font>
         <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">

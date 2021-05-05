@@ -123,6 +123,7 @@
       <name>Embedded Display</name>
       <macros>
         <DEV>Dwr</DEV>
+        <LT_LHE>Cryo-Dwr:LHe:LI5200-PercOut</LT_LHE>
         <N></N>
         <PT>Cryo-CBox:LP:PI3290:sRdV</PT>
         <TT_GHE>$(P):Dwr:TT-calc:sRdV</TT_GHE>
@@ -168,6 +169,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_4</name>
       <macros>
+        <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
         <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
@@ -204,6 +206,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_5</name>
       <macros>
+        <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
         <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
@@ -240,6 +243,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_6</name>
       <macros>
+        <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
         <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
@@ -276,6 +280,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_7</name>
       <macros>
+        <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
         <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
@@ -312,6 +317,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_8</name>
       <macros>
+        <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
         <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
