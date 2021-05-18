@@ -172,7 +172,7 @@
         <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
-        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_GHE>sim://const("20.000 K")</TT_GHE>
         <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
@@ -209,7 +209,7 @@
         <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
-        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_GHE>sim://const("20.000 K")</TT_GHE>
         <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
@@ -246,7 +246,7 @@
         <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
-        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_GHE>sim://const("20.000 K")</TT_GHE>
         <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
@@ -283,7 +283,7 @@
         <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
-        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_GHE>sim://const("20.000 K")</TT_GHE>
         <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
@@ -320,7 +320,7 @@
         <LT_LHE>$(P):$(DEV):LT-calc:sRdV</LT_LHE>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
-        <TT_GHE>$(P):$(DEV):TT-calc:sRdV</TT_GHE>
+        <TT_GHE>sim://const("20.000 K")</TT_GHE>
         <TT_LHE>$(P):$(DEV):TT-calc:sRdV</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>

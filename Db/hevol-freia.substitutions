@@ -42,10 +42,10 @@ file "dewar.template" { pattern
 {Cryo-HeVol Dwr	   "Linde dewar" 	 2.0    Cryo-Dwr:LHe:LI5200_Lt       Cryo-CBox:LP:PI3290}
 }
 file "ext-dewar.template" { pattern
-{P,         DEV,   DEV_STR,              VOL,   ACT_VOL_L,		     PT}
-{Cryo-HeVol D24	   "D24 portable dewar"  0.25   Cryo-HeVol:D24:VolLHe_Lt     1.013}
-{Cryo-HeVol D356   "D356 portable dewar" 0.1   	Cryo-HeVol:D356:VolLHe_Lt    1.013}
-{Cryo-HeVol D357   "D357 portable dewar" 0.1   	Cryo-HeVol:D357:VolLHe_Lt    1.013}
-{Cryo-HeVol D841   "D841 portable dewar" 0.1   	Cryo-HeVol:D841:VolLHe_Lt    1.013}
-{Cryo-HeVol D590   "D590 portable dewar" 1.0  	Cryo-HeVol:D590:VolLHe_Lt    1.013}
+{P,         DEV,   DEV_STR,              VOL,   ACT_VOL_L,		     AVG_GHE_DENS, PT}
+{Cryo-HeVol D24	   "D24 portable dewar"  0.25   Cryo-HeVol:D24:VolLHe_Lt     2.44	   1.013}
+{Cryo-HeVol D356   "D356 portable dewar" 0.1   	Cryo-HeVol:D356:VolLHe_Lt    2.44	   1.013}
+{Cryo-HeVol D357   "D357 portable dewar" 0.1   	Cryo-HeVol:D357:VolLHe_Lt    2.44	   1.013}
+{Cryo-HeVol D841   "D841 portable dewar" 0.1   	Cryo-HeVol:D841:VolLHe_Lt    2.44	   1.013}
+{Cryo-HeVol D590   "D590 portable dewar" 1.0  	Cryo-HeVol:D590:VolLHe_Lt    2.44	   1.013}
 }
