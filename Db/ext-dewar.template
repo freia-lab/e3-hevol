@@ -1,15 +1,15 @@
 record (ao, "$(P):$(DEV):VolLHe_Lt") {
   field(DESC, "LHe in $(DEV) dewar [l]")
   field(EGU, "l")
-  field(PREC, 1)
-  field(PINI, YES)
+  field(PREC, "1")
+  field(PINI, "YES")
   field(FLNK, "$(P):$(DEV):VolLHe")
 }
 
 record (ao, "$(P):$(DEV):Vol") {
   field(DESC, "Volume of $(DEV_STR)")
   field(EGU, "m³")
-  field(PREC, 3)
+  field(PREC, "3")
   field(VAL, "$(VOL)")
   field(PINI, "YES")
 }
@@ -18,7 +18,7 @@ record (calc, "$(P):$(DEV):VolLHe") {
 #  field(SCAN, "10 second")
 #  field(PHAS, "1")
   field(EGU, "m³")
-  field(PREC, 3)
+  field(PREC, "3")
   field(INPA, "$(ACT_VOL_L)")
   field(CALC, "A/1000")
   field(FLNK, "$(P):$(DEV):VolGHe")
@@ -26,7 +26,7 @@ record (calc, "$(P):$(DEV):VolLHe") {
 
 record (calc, "$(P):$(DEV):VolGHe") {
   field(EGU, "m³")
-  field(PREC, 3)
+  field(PREC, "3")
   field(INPA, "$(ACT_VOL_L)")
   field(INPB, "$(P):$(DEV):Vol")
   field(CALC, "A<0.1?0:B-A/1000")
@@ -35,7 +35,7 @@ record (calc, "$(P):$(DEV):VolGHe") {
 
 record (calc, "$(P):$(DEV):MassLHe") {
   field(EGU, "kg")
-  field(PREC, 1)
+  field(PREC, "1")
   field(INPA, "-2.19995")
   field(INPB, "-15.963")
   field(INPC, "143.59")
@@ -47,7 +47,7 @@ record (calc, "$(P):$(DEV):MassLHe") {
 
 record (calc, "$(P):$(DEV):MassGHe") {
   field(EGU, "kg")
-  field(PREC, 1)
+  field(PREC, "1")
   field(INPD, "3.6341")
   field(INPE, "9.9234")
   field(INPF, "2.8838")
@@ -60,7 +60,7 @@ record (calc, "$(P):$(DEV):MassGHe") {
 
 record (calc, "$(P):$(DEV):MassHe") {
   field(EGU, "kg")
-  field(PREC, 1)
+  field(PREC, "1")
   field(INPA, "$(P):$(DEV):MassLHe")
   field(INPB, "$(P):$(DEV):MassGHe")
   field(CALC, "A+B")
@@ -68,7 +68,7 @@ record (calc, "$(P):$(DEV):MassHe") {
 
 record (calc, "$(P):$(DEV):TT-calc:sRdV") {
   field(EGU, "K")
-  field(PREC, 3)
+  field(PREC, "3")
   field(SCAN, "10 second")
   field(INPA, "-0.3193")
   field(INPB, "1.715")
@@ -79,7 +79,7 @@ record (calc, "$(P):$(DEV):TT-calc:sRdV") {
 
 record (calc, "$(P):$(DEV):LT-calc:sRdV") {
   field(EGU, "%")
-  field(PREC, 1)
+  field(PREC, "1")
   field(SCAN, "10 second")
   field(INPA, "$(P):$(DEV):VolLHe_Lt")
   field(INPB, "$(VOL)")
@@ -100,7 +100,7 @@ record (ao, "$(P):$(DEV):InOut") {
   field(DESC, "Adding/removing from the cryo system")
   field(EGU, "l")
   field(DOL, "$(P):Ctrl:Zero")
-  field(UDFS, NO_ALARM)
+  field(UDFS, "NO_ALARM")
   field(FLNK, "$(P):$(DEV):dMassHe.PROC")
 }
 
@@ -108,7 +108,7 @@ record (calc, "$(P):$(DEV):dMassHe") {
   field(DESC, "LHe delivery(-) and return (+)")
   field(EGU, "kg")
   field(PREC, "1")
-  field(PINI, YES)
+  field(PINI, "YES")
   field(INPA, "-2.19995")
   field(INPB, "-15.963")
   field(INPC, "143.59")
