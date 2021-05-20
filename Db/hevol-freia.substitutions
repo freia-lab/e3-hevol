@@ -38,8 +38,8 @@ file "he-totals.template" { pattern
 # ACT_VOL_L - actual volume of LHe [l]
 # PT - pressure in the dewar [bar]
 file "dewar.template" { pattern
-{P,         DEV,   DEV_STR,              VOL,   ACT_VOL_L,		     PT}
-{Cryo-HeVol Dwr	   "Linde dewar" 	 2.0    Cryo-Dwr:LHe:LI5200_Lt       Cryo-CBox:LP:PI3290}
+{P,         DEV,   DEV_STR,              VOL,   ACT_VOL_L,	        PERC,				PT}
+{Cryo-HeVol Dwr	   "Linde dewar" 	 2.0    Cryo-Dwr:LHe:LI5200_Lt  Cryo-Dwr:LHe:LI5200-PercOut     Cryo-CBox:LP:PI3290}
 }
 file "ext-dewar.template" { pattern
 {P,         DEV,   DEV_STR,              VOL,   ACT_VOL_L,		     AVG_GHE_DENS, PT}
