@@ -134,7 +134,7 @@ record (calc, "$(P):HPstorage:MassGHe") {
   field(INPA,"300.0")
   field(INPB,"273.15")
   field(INPC, "0.1598")
-  field(INPJ,"Env-Container:TT001:sRdV")
+  field(INPJ,"Env-Container:TT001-smooth:sRdV")
   field(INPK,"Cryo-CBox:Pur:PI3404")
   field(INPL, "$(P):HPstorage:VolGHe")
   field(CALC, "L*K*C*A/(B+J)")
@@ -180,7 +180,7 @@ record (calc, "$(P):HPstorage:dMassHe") {
   field(INPA, "300.0")
   field(INPB, "273.15")
   field(INPC, "0.1598")
-  field(INPD, "Env-Container:TT001:sRdV")
+  field(INPD, "Env-Container:TT001-smooth:sRdV")
   field(INPI, "$(P):Ctrl:Reset")
   field(INPJ, "$(P):HPstorage:dMassHe")
   field(INPL, "$(P):HPstorage:InOut")
@@ -342,4 +342,17 @@ record (calc, "Cryo-CBox:LP:PI3290:sRdV") {
   field(CALC, "A*B")
 }
 
+
+# Help records
+##################
+
+record (ai, "Env-Container:TT001-smooth:sRdV") {
+    field(DESC, "Very smoothed T for HeVol")
+    field(SCAN, "5 second")
+    field(EGU, "ᵒC")
+    field(PREC, 1)
+    field(INP, "Env-Container:TT001:sRdV")
+    field(SMOO, "0.9995")
+    field(DTYP, "Soft Channel")
+}
 

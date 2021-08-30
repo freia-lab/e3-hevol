@@ -59,7 +59,7 @@
       <macros>
         <N></N>
         <PT>Cryo-CBox:Pur:PI3404</PT>
-        <TT_GHE>Env-Container:TT001:sRdV</TT_GHE>
+        <TT_GHE>Env-Container:TT001-smooth:sRdV</TT_GHE>
       </macros>
       <file>../Embedded/GHe-panel.bob</file>
       <width>290</width>
@@ -105,7 +105,7 @@
         <DEV>BufTank</DEV>
         <N></N>
         <PT>Cryo-Cmp:HP:PI2170</PT>
-        <TT_GHE>Env-Container:TT001:sRdV</TT_GHE>
+        <TT_GHE>Env-Container:TT001-smooth:sRdV</TT_GHE>
       </macros>
       <file>../Embedded/GHe-panel.bob</file>
       <width>290</width>
