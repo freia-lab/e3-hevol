@@ -3,6 +3,7 @@ record (ao, "$(P):$(DEV):VolLHe_Lt") {
   field(EGU, "l")
   field(PREC, "1")
   field(PINI, "YES")
+  info(autosaveFields,"VAL")
   field(FLNK, "$(P):$(DEV):VolLHe")
 }
 
@@ -128,6 +129,7 @@ record (calc, "$(P):$(DEV):dMassHe") {
   field(INPK, "$(AVG_GHE_DENS)")
   field(INPL, "$(P):$(DEV):InOut")
   field(CALC, "I=1?0:124.4*L/H+(L=0?0:K*(L>0?G-L/H:-L/H-G))+J")
+  info(autosaveFields,"VAL")
   field(FLNK,  "$(P):$(DEV):VolLHe_Lt-sel")
 }
 

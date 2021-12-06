@@ -27,6 +27,7 @@ record (ao, "$(P):Total-0:MassHe") {
   field(EGU, "kg")
   field(PREC, 1)
   field(PINI, YES)
+  info(autosaveFields,"VAL")
   field(DOL, "$(P):Total:MassHe")
 }
 
@@ -41,6 +42,7 @@ record (calcout, "$(P):Ctrl:Total:MassHe-Save") {
 record (stringin, "$(P):Ctrl:ResetTime") {
   field(DTYP, "Soft Timestamp")
   field(PINI, NO)
+  info(autosaveFields,"VAL")
   field(UDFS, NO_ALARM)
   field(INP, "@%Y-%m-%d %H:%M:%S")
 }
@@ -51,6 +53,7 @@ record (longout, "$(P):GHeRet-0:Counter") {
   field(DESC, "Return GHe Counter at Reset")
   field(EGU, "")
   field(PINI, YES)
+  info(autosaveFields,"VAL")
   field(DOL, "Cryo-HeVol:ReturnCnt")
 }
 

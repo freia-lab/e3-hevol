@@ -1,0 +1,11 @@
+epicsEnvSet("IOCDIR", "hevol")
+
+
+dbLoadRecords("hevol-freia.db")
+
+iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=$(TOP),IOCNAME=$(IOCNAME)")
+
+
+afterInit("epicsThreadSleep", "3")
+afterInit("dbpf", "Cryo-HeVol:HPstorage:InOut", "0")
+

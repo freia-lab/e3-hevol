@@ -1,0 +1,81 @@
+record (ao, "$(P):$(DEV):Vol") {
+  field(DESC, "Volume of $(DEV_STR)")
+  field(EGU, "m³")
+  field(PREC, "3")
+  field(VAL, "$(VOL)")
+  field(PINI, "YES")
+}
+
+record (calc, "$(P):$(DEV):VolLHe") {
+  field(SCAN, "10 second")
+  field(EGU, "m³")
+  field(PREC, "3")
+  field(INPA, "$(ACT_VOL_L)")
+  field(CALC, "A/1000")
+  field(FLNK, "$(P):$(DEV):VolGHe")
+}
+
+record (calc, "$(P):$(DEV):VolGHe") {
+  field(EGU, "m³")
+  field(PREC, "3")
+  field(INPA, "$(ACT_VOL_L)")
+  field(INPB, "$(P):$(DEV):Vol")
+  field(CALC, "A<0.1?0:B-A/1000")
+  field(FLNK, "$(P):$(DEV):MassLHe")
+}
+
+record (calc, "$(P):$(DEV):MassLHe") {
+  field(EGU, "kg")
+  field(PREC, "1")
+  field(INPA, "-2.1995")
+  field(INPB, "-15.963")
+  field(INPC, "143.59")
+  field(INPK, "$(PT)")
+  field(INPL, "$(P):$(DEV):VolLHe")
+  field(CALC, "(A*(K^2)+B*K+C)*L")
+  field(FLNK, "$(P):$(DEV):MassGHe")
+}
+
+record (calc, "$(P):$(DEV):MassGHe") {
+  field(EGU, "kg")
+  field(PREC, "1")
+  field(INPA, "0")
+  field(INPB, "0")
+  field(INPC, "0")
+  field(INPK, "$(P):$(DEV):GHe-dens")
+  field(INPL, "$(P):$(DEV):VolGHe")
+  field(CALC, "K*L")
+  field(FLNK, "$(P):$(DEV):MassHe")
+}
+
+record (calc, "$(P):$(DEV):MassHe") {
+  field(EGU, "kg")
+  field(PREC, "1")
+  field(INPA, "$(P):$(DEV):MassLHe")
+  field(INPB, "$(P):$(DEV):MassGHe")
+  field(CALC, "A+B")
+}
+
+record (calc, "$(P):$(DEV):TT-calc:sRdV") {
+  field(EGU, "K")
+  field(PREC, "3")
+  field(SCAN, "10 second")
+  field(INPA, "-0.3193")
+  field(INPB, "1.715")
+  field(INPC, "2.8012")
+  field(INPK, "$(PT)")
+  field(CALC, "A*(K^2)+B*K+C")
+}
+
+record (calc, "$(P):$(DEV):GHe-dens") {
+  field(EGU, "kg/m³")
+  field(PREC, "3")
+  field(SCAN, "10 second")
+  field(INPA, "0")
+  field(INPB, "0")
+  field(INPC, "0")
+  field(INPK, "$(PT)")
+  field(INPL, "$(PERC)")
+  field(CALC, "2.44*K")
+}
+

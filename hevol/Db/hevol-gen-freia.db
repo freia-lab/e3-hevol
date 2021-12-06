@@ -114,6 +114,7 @@ record (calc, "$(P):BufTank:MassGHe") {
 record (longout, "$(P):HPstorage:Bundles") {
   field(DESC, "Number of bundles in HP storage")
   field(PINI, YES)
+  info(autosaveFields,"VAL")
   field(FLNK, "$(P):HPstorage:VolGHe")
 }
 
@@ -185,6 +186,7 @@ record (calc, "$(P):HPstorage:dMassHe") {
   field(INPJ, "$(P):HPstorage:dMassHe")
   field(INPL, "$(P):HPstorage:InOut")
   field(CALC, "I=1?0:L*C*A/(B+D)+J")
+  info(autosaveFields,"VAL")
 }
 
 

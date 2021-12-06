@@ -1,0 +1,77 @@
+record (bo, "$(P):Ctrl:Reset") {
+  field(DESC, "Reset the He balance accounting")
+  field(HIGH, "0.5")
+  field(UDFS, NO_ALARM)
+  field(FLNK, "$(P):Ctrl:Fanout")
+}
+
+record (fanout, "$(P):Ctrl:Fanout") {
+  field(LNK1, "$(P):D24:InOut-Rst")
+  field(LNK2, "$(P):D356:InOut-Rst")
+  field(LNK3, "$(P):D357:InOut-Rst")
+  field(LNK4, "$(P):D841:InOut-Rst")
+  field(LNK5, "$(P):D590:InOut-Rst")
+  field(LNK6, "$(P):HPstorage:InOut-Rst")
+  field(LNKD, "$(P):Ctrl:ResetTime")
+  field(LNKE, "$(P):Ctrl:GHeRet-Save")
+  field(LNKF, "$(P):Ctrl:Total:MassHe-Save")
+}
+
+record (calc, "$(P):Ctrl:Zero") {
+  field(CALC, "0")
+  field(PINI, YES)
+}
+
+record (ao, "$(P):Total-0:MassHe") {
+  field(DESC, "Total mass of helium at Reset")
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(PINI, YES)
+  info(autosaveFields,"VAL")
+  field(DOL, "$(P):Total:MassHe")
+}
+
+record (calcout, "$(P):Ctrl:Total:MassHe-Save") {
+  field(INPA, "$(P):Ctrl:Reset")
+  field(CALC, "A=1?1:0")
+  field(OUT, "$(P):Total-0:MassHe.OMSL")
+  field(FLNK, "$(P):Total-0:MassHe.PROC")
+}
+
+
+record (stringin, "$(P):Ctrl:ResetTime") {
+  field(DTYP, "Soft Timestamp")
+  field(PINI, NO)
+  info(autosaveFields,"VAL")
+  field(UDFS, NO_ALARM)
+  field(INP, "@%Y-%m-%d %H:%M:%S")
+}
+
+# Gas helium return
+###################
+record (longout, "$(P):GHeRet-0:Counter") {
+  field(DESC, "Return GHe Counter at Reset")
+  field(EGU, "")
+  field(PINI, YES)
+  info(autosaveFields,"VAL")
+  field(DOL, "Cryo-HeVol:ReturnCnt")
+}
+
+record (calcout, "$(P):Ctrl:GHeRet-Save") {
+  field(INPA, "$(P):Ctrl:Reset")
+  field(CALC, "A=1?1:0")
+  field(OUT, "$(P):GHeRet-0:Counter.OMSL")
+  field(FLNK, "$(P):GHeRet-0:Counter.PROC")
+}
+
+record (calc, "$(P):GHeRet:dMassHe") {
+  field(DESC, "GHe return")
+  field(EGU, "kg")
+  field(PREC, "1")
+#  field(PINI, YES)
+  field(INPA, "0.163")
+  field(INPB, "0.1")
+  field(INPI, "Cryo-HeVol:ReturnCnt")
+  field(INPJ, "$(P):GHeRet-0:Counter")
+  field(CALC, "(I-J)*A*B")
+}

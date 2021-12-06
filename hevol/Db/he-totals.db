@@ -137,6 +137,7 @@ record (ao, "$(P):Total:MassGHe") {
   field(PINI, YES)
   field(EGU, "kg")
   field(PREC, 1)
+  info(autosaveFields,"VAL")
 }
 
 record (calcout, "$(P):Total:MassLHe-calc") {
@@ -160,6 +161,7 @@ record (ao, "$(P):Total:MassLHe") {
   field(PINI, YES)
   field(EGU, "kg")
   field(PREC, 1)
+  info(autosaveFields,"VAL")
 }
 
 record (calcout, "$(P):Total:MassHe-calc") {
@@ -178,6 +180,7 @@ record (ao, "$(P):Total:MassHe") {
   field(PINI, YES)
   field(EGU, "kg")
   field(PREC, 1)
+  info(autosaveFields,"VAL")
   field(FLNK, "$(P):Total:VolHeEquiv")
 }
 

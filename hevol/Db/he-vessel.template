@@ -1,0 +1,64 @@
+record (ao, "$(P):$(DEV):Vol$(N)") {
+  field(DESC, "Volume of the $(DEV_STR)")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "$(VOL)")
+  field(PINI, "YES")
+}
+record (calc, "$(P):$(DEV):VolLHe$(N)") {
+  field(DESC, "LHe volume in $(DEV_STR)")
+  field(SCAN, "10 second")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(INPG, "$(INSERT)")
+  field(INPJ, "$(LI_MAX)")
+  field(INPK, "$(P):$(DEV):Vol$(N)")
+  field(INPL, "$(LI)")
+  field(CALC, "$(LHE_VOL_CALC)")
+  field(FLNK, "$(P):$(DEV):VolGHe$(N)")
+}
+
+record (calc, "$(P):$(DEV):VolGHe$(N)") {
+  field(DESC, "GHe volume in $(DEV_STR)")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(INPA, "$(P):$(DEV):Vol$(N)")
+  field(INPB, "$(P):$(DEV):VolLHe$(N)")
+  field(CALC, "A-B")
+  field(FLNK, "$(P):$(DEV):MassLHe$(N)")
+}
+
+record (calc, "$(P):$(DEV):MassLHe$(N)") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "-1.1766")
+  field(INPB, "6.1229")
+  field(INPC, "-11.763")
+  field(INPD, "153.73")
+  field(INPK, "$(LHE_TT)")
+  field(INPL, "$(P):$(DEV):VolLHe$(N)")
+  field(CALC, "K<5?(K<1.8?0:(A*(K^3)+B*(K^2)+C*K+D)*L):0")
+  field(FLNK, "$(P):$(DEV):MassGHe$(N)")
+}
+
+record (calc, "$(P):$(DEV):MassGHe$(N)") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "58")
+  field(INPB, "1013")
+  field(INPJ, "$(PT)")
+  field(INPK, "$(GHE_TT)")
+  field(INPL, "$(P):$(DEV):VolGHe$(N)")
+  field(CALC, "((K>4)&&(K<320))?(J<3000?(A/K*J/B)*L:(A/K)*L):0")
+  field(FLNK, "$(P):$(DEV):MassHe$(N)")
+}
+
+record (calc, "$(P):$(DEV):MassHe$(N)") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):$(DEV):MassLHe$(N)")
+  field(INPB, "$(P):$(DEV):MassGHe$(N)")
+  field(CALC, "A+B")
+}
+
+
