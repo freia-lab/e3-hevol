@@ -110,7 +110,7 @@
       <text>LHe</text>
       <y>90</y>
       <width>62</width>
-      <height>48</height>
+      <height>54</height>
       <font>
         <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
         </font>
@@ -121,8 +121,8 @@
       <name>Label_40</name>
       <text>GHe</text>
       <y>140</y>
-      <width>66</width>
-      <height>48</height>
+      <width>67</width>
+      <height>54</height>
       <font>
         <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
         </font>
@@ -154,18 +154,6 @@
       </font>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_43</name>
-      <text>LHe + GHe</text>
-      <y>190</y>
-      <width>161</width>
-      <height>48</height>
-      <font>
-        <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_38</name>
@@ -232,5 +220,18 @@
       </font>
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_43</name>
+    <text>LHe + GHe</text>
+    <x>480</x>
+    <y>200</y>
+    <width>200</width>
+    <height>54</height>
+    <font>
+      <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
   </widget>
 </display>
