@@ -21,7 +21,7 @@
         <N></N>
         <PT>CstatH-RHtr:PT550:sRdV</PT>
         <TT_GHE>CM-VBox:TT01:sRdV</TT_GHE>
-        <TT_LHE>Cryo-HeVol:CM-VBox:MassLHe.INPK</TT_LHE>
+        <TT_LHE>Cryo-HeVol:CM-VBox:MassLHe.K</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
       <width>290</width>
@@ -39,11 +39,11 @@
       <name>Embedded Display_6</name>
       <macros>
         <DEV>CM-CM</DEV>
-        <LT_LHE>CM-CM:LT01:sRdV</LT_LHE>
+        <LT_LHE>CM-CM:LT:sRdV</LT_LHE>
         <N></N>
         <PT>CM-CM:PT03:sRdV</PT>
         <TT_GHE>CM-CM:TT06:sRdV</TT_GHE>
-        <TT_LHE>CM-CM:TT04:sRdV</TT_LHE>
+        <TT_LHE>CM-CM:TT05:sRdV</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
       <width>290</width>

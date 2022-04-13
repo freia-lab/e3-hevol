@@ -958,7 +958,7 @@ record (calc, "Cryo-HeVol:CM-CM:VolLHe") {
   field(INPG, "0")
   field(INPJ, "68")
   field(INPK, "Cryo-HeVol:CM-CM:Vol")
-  field(INPL, "CM-CM:LT01:sRdV")
+  field(INPL, "CM-CM:LT:sRdV")
   field(CALC, "L<0?0:(L>=J?K:(L<52?2.23e-3*L:(L-52)*3.75e-4+0.116))")
   field(FLNK, "Cryo-HeVol:CM-CM:VolGHe")
 }

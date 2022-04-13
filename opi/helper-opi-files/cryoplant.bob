@@ -37,7 +37,7 @@
         <DEV>GasBag</DEV>
         <N></N>
         <PT>Env-FREIA:PT001:sRdV</PT>
-        <TT_GHE>Env-CmpRoom:TT001:sRdV</TT_GHE>
+        <TT_GHE>Cryo-Rec:LP:TI7215</TT_GHE>
       </macros>
       <file>../Embedded/GHe-panel.bob</file>
       <width>290</width>
