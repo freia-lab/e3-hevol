@@ -8,6 +8,7 @@ E3_MODULE_MAKEFILE := $(E3_MODULE_NAME).Makefile
 AUTOSAVE_DEP_VERSION:=5.10.2+0
 
 OPI_VERSION := 1.1.1
+OPI_DIRNAME := HeBalance
 
 -include $(TOP)/configure/CONFIG_OPTIONS
 -include $(TOP)/configure/CONFIG_MODULE.local
