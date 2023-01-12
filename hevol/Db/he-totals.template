@@ -1,4 +1,4 @@
-# CstatV - magnet insert
+# CstatV - magnet/liquid insert
 #########################
 
   record (calc, "$(P):CstatV:VolLHe") {
@@ -10,7 +10,9 @@
   field(INPB, "$(P):MagIns:VolLHe-2")
   field(INPC, "$(P):MagIns:VolLHe-3")
   field(INPD, "$(P):CstatV-VBox:VolLHe")
-  field(CALC, "A+B+C+D")
+  field(INPE, "$(P):LiqIns:VolLHe-1")
+  field(INPF, "$(P):LiqIns:VolLHe-2")
+  field(CALC, "A+B+C+D+E+F")
   field(FLNK, "$(P):CstatV:VolGHe")
 }
 record (calc, "$(P):CstatV:VolGHe") {
@@ -20,7 +22,9 @@ record (calc, "$(P):CstatV:VolGHe") {
   field(INPB, "$(P):MagIns:VolGHe-2")
   field(INPC, "$(P):MagIns:VolGHe-3")
   field(INPD, "$(P):CstatV-VBox:VolGHe")
-  field(CALC, "A+B+C+D")
+  field(INPE, "$(P):LiqIns:VolGHe-1")
+  field(INPF, "$(P):LiqIns:VolGHe-2")
+  field(CALC, "A+B+C+D+E+F")
   field(FLNK, "$(P):CstatV:MassLHe")
 }
 
@@ -31,7 +35,9 @@ record (calc, "$(P):CstatV:MassLHe") {
   field(INPB, "$(P):MagIns:MassLHe-2")
   field(INPC, "$(P):MagIns:MassLHe-3")
   field(INPD, "$(P):CstatV-VBox:MassLHe")
-  field(CALC, "A+B+C+D")
+  field(INPE, "$(P):LiqIns:MassLHe-1")
+  field(INPF, "$(P):LiqIns:MassLHe-2")
+  field(CALC, "A+B+C+D+E+F")
   field(FLNK, "$(P):CstatV:MassGHe")
 }
 record (calc, "$(P):CstatV:MassGHe") {
@@ -41,7 +47,9 @@ record (calc, "$(P):CstatV:MassGHe") {
   field(INPB, "$(P):MagIns:MassGHe-2")
   field(INPC, "$(P):MagIns:MassGHe-3")
   field(INPD, "$(P):CstatV-VBox:MassGHe")
-  field(CALC, "A+B+C+D")
+  field(INPE, "$(P):LiqIns:MassGHe-1")
+  field(INPF, "$(P):LiqIns:MassGHe-2")
+  field(CALC, "A+B+C+D+E+F")
   field(FLNK, "$(P):CstatV:MassHe")
 }
 record (calc, "$(P):CstatV:MassHe") {

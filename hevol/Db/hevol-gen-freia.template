@@ -3,6 +3,10 @@ record (longin, "$(P):ReturnCnt") {
   field (SCAN, "10 second")
   field (INP, "HeliumVolume:In")
 }
+
+# Magnet insert
+######################
+
 record (ao, "$(P):MagIns:Vol-1") {
   field(DESC, "Volume below the lambda plate")
   field(EGU, "m³")
@@ -44,6 +48,53 @@ record (ao, "$(P):MagIns:VolGHe-7") {
   field(EGU, "m³")
   field(PREC, 3)
   field(VAL, "0.262")
+  field(PINI, "YES")
+}
+
+# Liquid insert
+######################
+
+record (ao, "$(P):LiqIns:Vol-1") {
+  field(DESC, "Volume below the lambda plate")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "2.649")
+  field(PINI, "YES")
+}
+record (ao, "$(P):LiqIns:Vol-2") {
+  field(DESC, "Volume above the lambda plate")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.742")
+  field(PINI, "YES")
+}
+record (ao, "$(P):LiqIns:VolGHe-4") {
+  field(DESC, "Volume above LT670")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.400")
+  field(PINI, "YES")
+}
+
+record (ao, "$(P):LiqIns:VolGHe-5") {
+  field(DESC, "Volume above 1st screen")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.300")
+  field(PINI, "YES")
+}
+record (ao, "$(P):LiqIns:VolGHe-6") {
+  field(DESC, "Volume above 2nd screen")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.400")
+  field(PINI, "YES")
+}
+record (ao, "$(P):LiqIns:VolGHe-7") {
+  field(DESC, "Volume above 3rd screen")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(VAL, "0.160")
   field(PINI, "YES")
 }
 
@@ -206,7 +257,7 @@ record (calc, "$(P):MagIns:VolLHe-1") {
   field(INPD, "$(P):Foam-1:Volume")
   field(INPE, "$(P):Foam-2:Volume")
   field(INPF, "$(P):Magnet:Volume")
-  field(INPG, "CstatV-Ctrl:MagIns:sInp")
+  field(INPG, "CstatV-Ctrl:MagIns:sProcInp")
   field(INPJ, "100.0")
   field(INPK, "$(P):MagIns:Vol-1")
   field(INPL, "CstatV-LHe:LI680:sRdV")
@@ -223,7 +274,8 @@ record (calc, "$(P):MagIns:VolGHe-1") {
   field(INPD, "$(P):Foam-1:Volume")
   field(INPE, "$(P):Foam-2:Volume")
   field(INPF, "$(P):Magnet:Volume")
-  field(CALC, "A-D-E-F-B")
+  field(INPG, "CstatV-Ctrl:MagIns:sProcInp")
+  field(CALC, "G=0?0:A-D-E-F-B")
 }
 
 record (calc, "$(P):MagIns:VolLHe-2") {
@@ -234,7 +286,7 @@ record (calc, "$(P):MagIns:VolLHe-2") {
   field(PREC, 3)
   field(INPA, "$(P):Foam-3:VolLHe")
   field(INPB, "$(P):Foam-3:Volume")
-  field(INPG, "CstatV-Ctrl:MagIns:sInp")
+  field(INPG, "CstatV-Ctrl:MagIns:sProcInp")
   field(INPJ, "100.0")
   field(INPK, "$(P):MagIns:Vol-2")
   field(INPL, "CstatV-LHe:LT682:sRdV")
@@ -249,7 +301,8 @@ record (calc, "$(P):MagIns:VolGHe-2") {
   field(INPA, "$(P):MagIns:Vol-2")
   field(INPB, "$(P):MagIns:VolLHe-2")
   field(INPC, "$(P):Foam-3:Volume")
-  field(CALC, "A-C-B")
+  field(INPG, "CstatV-Ctrl:MagIns:sProcInp")
+  field(CALC, "G=0?0:A-C-B")
 }
 
 # He mass below the lambda plate
@@ -328,6 +381,152 @@ record (calc, "$(P):MagIns:MassHe-2") {
   field(PREC, 1)
   field(INPA, "$(P):MagIns:MassLHe-2")
   field(INPB, "$(P):MagIns:MassGHe-2")
+  field(CALC, "A+B")
+}
+
+
+##################################
+# Liquid Insert
+##################################
+
+# Not taking into account the cavity volume
+
+record (calc, "$(P):LiqIns:VolLHe-1") {
+  field(DESC, "LHe volume below lambda plate")
+  field(SCAN, "10 second")
+  field(PHAS, "0")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(INPA, "$(P):Foam-1:VolLHe")
+  field(INPB, "$(P):Foam-2:VolLHe")
+  field(INPC, "0")
+  field(INPD, "$(P):Foam-1:Volume")
+  field(INPE, "$(P):Foam-2:Volume")
+  field(INPF, "0")
+  field(INPG, "CstatV-Ctrl:LiqIns:sProcInp")
+  field(INPJ, "82.0")
+  field(INPK, "$(P):LiqIns:Vol-1")
+  field(INPL, "CstatV-LHe:LI670:sRdV")
+  field(CALC, "G=0?0:(L<0?0:(L>=82?K-D-E-F:K*L/J-A-B-C))")
+  field(FLNK, "$(P):LiqIns:VolGHe-1")
+}
+
+record (calc, "$(P):LiqIns:VolGHe-1") {
+  field(DESC, "GHe volume below lambda plate")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(INPA, "$(P):LiqIns:Vol-1")
+  field(INPB, "$(P):LiqIns:VolLHe-1")
+  field(INPD, "$(P):Foam-1:Volume")
+  field(INPE, "$(P):Foam-2:Volume")
+  field(INPF, "0")
+  field(INPG, "CstatV-Ctrl:LiqIns:sProcInp")
+  field(CALC, "G=0?0:A-D-E-F-B")
+}
+
+record (calc, "$(P):LiqIns:VolLHe-2") {
+  field(DESC, "LHe volume above lambda plate")
+  field(SCAN, "10 second")
+  field(PHAS, "0")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(INPA, "$(P):Foam-3:VolLHe")
+  field(INPB, "$(P):Foam-3:Volume")
+  field(INPG, "CstatV-Ctrl:LiqIns:sProcInp")
+  field(INPJ, "18.0")
+  field(INPK, "$(P):LiqIns:Vol-2")
+  field(INPL, "CstatV-LHe:LI670:sRdV")
+  field(CALC, "G=0?0:(L<82?0:(L>=100?K-B:K*(L-82)/J-A))")
+  field(FLNK, "$(P):LiqIns:VolGHe-2")
+}
+
+record (calc, "$(P):LiqIns:VolGHe-2") {
+  field(DESC, "GHe volume above lambda plate")
+  field(EGU, "m³")
+  field(PREC, 3)
+  field(INPA, "$(P):LiqIns:Vol-2")
+  field(INPB, "$(P):LiqIns:VolLHe-2")
+  field(INPC, "$(P):Foam-3:Volume")
+  field(INPG, "CstatV-Ctrl:LiqIns:sProcInp")
+  field(CALC, "G=0?0:A-C-B")
+}
+
+# He mass below the lambda plate
+
+record (calc, "$(P):LiqIns:MassLHe-1") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(PHAS, "1")
+  field(INPA, "-5.02")
+  field(INPB, "21.5")
+  field(INPC, "125")
+  field(INPJ, "CstatV-LHe:TT663L:sRdV.SEVR")
+  field(INPK, "CstatV-LHe:TT663L:sRdV")
+  field(INPL, "$(P):LiqIns:VolLHe-1")
+  field(CALC, "(K>4.28)?L*125:(A*K*K+B*K+C)*L")
+  field(FLNK, "$(P):LiqIns:MassGHe-1")
+}
+
+record (calc, "$(P):LiqIns:MassGHe-1") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "58")
+  field(INPB, "1013")
+  field(INPH, "CstatV-LHe:PT660L:sRdV.SEVR")
+  field(INPI, "CstatV-LHe:TT671L:sRdV.SEVR")
+  field(INPJ, "CstatV-LHe:PT660L:sRdV")
+  field(INPK, "CstatV-LHe:TT671L:sRdV")
+  field(INPL, "$(P):LiqIns:VolGHe-1")
+  field(CALC, "((H>2)||(I>2))?0:(A/K*J/B)*L")
+  field(FLNK, "$(P):LiqIns:MassHe-1")
+}
+
+record (calc, "$(P):LiqIns:MassHe-1") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):LiqIns:MassLHe-1")
+  field(INPB, "$(P):LiqIns:MassGHe-1")
+  field(CALC, "A+B")
+}
+
+# He mass above the lambda plate
+
+record (calc, "$(P):LiqIns:MassLHe-2") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(SCAN, "10 second")
+  field(PHAS, "1")
+  field(INPA, "-5.02")
+  field(INPB, "21.5")
+  field(INPC, "125")
+  field(INPJ, "CstatV-LHe:TT665L:sRdV.SEVR")
+  field(INPK, "CstatV-LHe:TT665L:sRdV")
+  field(INPL, "$(P):LiqIns:VolLHe-2")
+  field(CALC, "((K>5)||(J>2))?0:(A*K*K+B*K+C)*L")
+  field(FLNK, "$(P):LiqIns:MassGHe-2")
+}
+
+record (calc, "$(P):LiqIns:MassGHe-2") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "58")
+  field(INPB, "1013")
+  field(INPG, "CstatV-LHe:PT660L:sRdV.SEVR")
+  field(INPH, "CstatV-LHe:TT667L:sRdV.SEVR")
+  field(INPI, "$(P):LiqIns:VolGHe-4")
+  field(INPJ, "CstatV-LHe:PT660L:sRdV")
+  field(INPK, "CstatV-LHe:TT667L:sRdV")
+  field(INPL, "$(P):LiqIns:VolGHe-2")
+  field(CALC, "((G>2)||(H>2))?0:(A/K*J/B)*(I+L)")
+  field(FLNK, "$(P):LiqIns:MassHe-2")
+}
+
+record (calc, "$(P):LiqIns:MassHe-2") {
+  field(EGU, "kg")
+  field(PREC, 1)
+  field(INPA, "$(P):LiqIns:MassLHe-2")
+  field(INPB, "$(P):LiqIns:MassGHe-2")
   field(CALC, "A+B")
 }
 

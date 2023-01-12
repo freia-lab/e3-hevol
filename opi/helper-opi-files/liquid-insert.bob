@@ -19,18 +19,6 @@
     <transparent>true</transparent>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_1</name>
-    <macros>
-      <FILLER>Foam-2</FILLER>
-    </macros>
-    <file>../Embedded/foam.bob</file>
-    <x>20</x>
-    <y>510</y>
-    <width>410</width>
-    <height>280</height>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="embedded" version="2.0.0">
     <name>Embedded Display_3</name>
     <macros>
       <FILLER>Foam-3</FILLER>
@@ -42,7 +30,7 @@
     <height>330</height>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>  The insert  </name>
+    <name>  The insert  (lower part)  </name>
     <x>420</x>
     <y>660</y>
     <width>332</width>
@@ -51,12 +39,13 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_5</name>
       <macros>
+        <DEV>LiqIns</DEV>
         <LT_LHE>CstatV-LHe:LI670:sRdV</LT_LHE>
-        <LiqIns>MagIns</LiqIns>
+        <LiqIns>LiqIns</LiqIns>
         <N>-1</N>
-        <PT>CstatV-LHe:PT680:sRdV</PT>
-        <TT_GHE>CstatV-LHe:TT667M:sRdV</TT_GHE>
-        <TT_LHE>CstatV-LHe:TT663M:sRdV</TT_LHE>
+        <PT>CstatV-LHe:PT660L:sRdV</PT>
+        <TT_GHE>CstatV-LHe:TT671L:sRdV</TT_GHE>
+        <TT_LHE>CstatV-LHe:TT663L:sRdV</TT_LHE>
       </macros>
       <file>../Embedded/He-panel.bob</file>
       <width>290</width>
@@ -110,7 +99,7 @@
       <text>LHe</text>
       <y>90</y>
       <width>62</width>
-      <height>54</height>
+      <height>48</height>
       <font>
         <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
         </font>
@@ -121,8 +110,8 @@
       <name>Label_40</name>
       <text>GHe</text>
       <y>140</y>
-      <width>67</width>
-      <height>54</height>
+      <width>66</width>
+      <height>48</height>
       <font>
         <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
         </font>
@@ -226,12 +215,47 @@
     <text>LHe + GHe</text>
     <x>480</x>
     <y>200</y>
-    <width>200</width>
-    <height>54</height>
+    <width>161</width>
+    <height>48</height>
     <font>
       <font name="HUGE-SANS-BOLD" family="Source Sans Pro" style="BOLD" size="36.0">
       </font>
     </font>
     <auto_size>true</auto_size>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <FILLER>Foam-2</FILLER>
+    </macros>
+    <file>../Embedded/foam.bob</file>
+    <x>20</x>
+    <y>280</y>
+    <width>410</width>
+    <height>280</height>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  The insert (upper part)  </name>
+    <x>420</x>
+    <y>260</y>
+    <width>332</width>
+    <height>372</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_6</name>
+      <macros>
+        <DEV>LiqIns</DEV>
+        <LT_LHE>CstatV-LHe:LI670:sRdV</LT_LHE>
+        <LiqIns>MagIns</LiqIns>
+        <N>-2</N>
+        <PT>CstatV-LHe:PT660L:sRdV</PT>
+        <TT_GHE>CstatV-LHe:TT667L:sRdV</TT_GHE>
+        <TT_LHE>CstatV-LHe:TT665L:sRdV</TT_LHE>
+      </macros>
+      <file>../Embedded/He-panel.bob</file>
+      <width>290</width>
+      <height>330</height>
+    </widget>
   </widget>
 </display>

@@ -10,7 +10,9 @@ record (calc, "$(P):$(FILLER):BottomPosPerCnt") {
   field(PREC, 1)
   field(INPA, "$(P):$(FILLER):BottomPos")
   field(INPB, "$(LI_MAX)")
-  field(CALC, "100*A/B")
+  field(INPC, "$(LI_LQ_MAX)")
+  field(INPD, "CstatV-Ctrl:LiqIns:sProcInp")
+  field(CALC, "D=0?100*A/B:100*A/C")
 }
 
 record (ao, "$(P):$(FILLER):Height") {
@@ -25,7 +27,9 @@ record (calc, "$(P):$(FILLER):HeightPerCnt") {
   field(PREC, 1)
   field(INPA, "$(P):$(FILLER):Height")
   field(INPB, "$(LI_MAX)")
-  field(CALC, "100*A/B")
+  field(INPC, "$(LI_LQ_MAX)")
+  field(INPD, "CstatV-Ctrl:LiqIns:sProcInp")
+  field(CALC, "D=0?100*A/B:100*A/C")
   field(FLNK, "$(P):$(FILLER):Volume")
 }
 
@@ -57,6 +61,7 @@ record (calc, "$(P):$(FILLER):Volume") {
 # INPA - total volume [m³]
 # INPB - Bottom pos [%] of $(LI)
 # INPC - Height in [%] of $(LI)
+# INPD - Liquid insert selector
 
 record(calc, "$(P):$(FILLER):VolGas") {
   field(EGU, "m³")
@@ -65,8 +70,10 @@ record(calc, "$(P):$(FILLER):VolGas") {
   field(INPA, "$(P):$(FILLER):Volume")
   field(INPB, "$(P):$(FILLER):BottomPosPerCnt")
   field(INPC, "$(P):$(FILLER):HeightPerCnt")
+  field(INPD, "CstatV-Ctrl:LiqIns:sProcInp")
+  field(INPJ, "CstatV-LHe:$(LI_LQ):sRdV")
   field(INPK, "CstatV-LHe:$(LI):sRdV")
-  field(CALC, "K<B?A:(K>=(B+C)?0:A*(B+C-K)/C)")
+  field(CALC, "D=0?(K<B?A:(K>=(B+C)?0:A*(B+C-K)/C)):(J<B?A:(J>=(B+C)?0:A*(B+C-J)/C))")
   field(FLNK, "$(P):$(FILLER):VolLHe")
 }
 
