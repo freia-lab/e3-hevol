@@ -10,6 +10,7 @@
 core.*
 *-loc/*.Makefile
 hevol/*.Makefile
+hevol/O.*
 cellMods/
 testMods*/
 *PVs.list
