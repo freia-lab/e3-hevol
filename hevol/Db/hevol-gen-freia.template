@@ -108,6 +108,9 @@ record (ao, "$(P):GasBag:Vol") {
   field(PINI, "YES")
 }
 
+# Introduced correction factor for the volume calculation
+# (based on the change of He mass in the high storage prassure
+# during emypying the gas bag)
 record (calc, "$(P):GasBag:VolGHe") {
   field(DESC, "GHe volume in the gas bag")
   field(SCAN, "10 second")
@@ -115,10 +118,13 @@ record (calc, "$(P):GasBag:VolGHe") {
   field(PREC, 3)
   field(INPA, "70")
   field(INPB, "400")
+  field(INPC, "1.15")
+  field(C, "1")
   field(INPK, "$(P):GasBag:Vol")
   field(INPL, "Cryo-Rec:LP:GasBagLidar")
-  field(CALC, "L<A?K:(L>=B?0:(B-L)/(B-A)*K)")
+  field(CALC, "L<A?K:(L>=B?0:C*(B-L)/(B-A)*K)")
   field(FLNK, "$(P):GasBag:MassGHe")
+  info(autosaveFields_pass1,"C")
 }
 
 record (calc, "$(P):GasBag:MassGHe") {
@@ -555,5 +561,6 @@ record (ai, "Env-Container:TT001-smooth:sRdV") {
     field(INP, "Env-Container:TT001:sRdV")
     field(SMOO, "0.9995")
     field(DTYP, "Soft Channel")
+    info(autosaveFields_pass1,"VAL")
 }
 
