@@ -72,9 +72,8 @@ record (calc, "$(P):$(DEV):MassLHe") {
 
 # We need to approximate the average density of the He gas in the dewar.
 # It depends on the gas temperature distribution in the dewar
-# above the LHe. It probably depends on the amount of LHe in the dewar.
-# As a first approximation we take assume a constant temperature of the
-# gas to be 20 K. The density is then 2.44 kg/m³ at 1013 mbar 
+# above the LHe. As the first approximation we will assume that it's
+# a saturated gas at 1.064 bar.
 
 record (calc, "$(P):$(DEV):MassGHe") {
   field(EGU, "kg")

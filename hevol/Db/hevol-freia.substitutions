@@ -43,9 +43,9 @@ file "dewar.template" { pattern
 }
 file "ext-dewar.template" { pattern
 {P,         DEV,   DEV_STR,              VOL,   ACT_VOL_L,		     AVG_GHE_DENS, PT,     EVAP}
-{Cryo-HeVol D24	   "D24 portable dewar"  0.25   Cryo-HeVol:D24:VolLHe_Lt     2.44	   1.013   5}
-{Cryo-HeVol D356   "D356 portable dewar" 0.1   	Cryo-HeVol:D356:VolLHe_Lt    2.44	   1.013   2}
-{Cryo-HeVol D357   "D357 portable dewar" 0.1   	Cryo-HeVol:D357:VolLHe_Lt    2.44	   1.013   2}
-{Cryo-HeVol D841   "D841 portable dewar" 0.1   	Cryo-HeVol:D841:VolLHe_Lt    2.44	   1.013   2}
-{Cryo-HeVol D590   "D590 portable dewar" 1.0  	Cryo-HeVol:D590:VolLHe_Lt    2.44	   1.013   0}
+{Cryo-HeVol D24	   "D24 portable dewar"  0.25   Cryo-HeVol:D24:VolLHe_Lt     17.73	   1.013   5}
+{Cryo-HeVol D356   "D356 portable dewar" 0.1   	Cryo-HeVol:D356:VolLHe_Lt    17.73	   1.013   2}
+{Cryo-HeVol D357   "D357 portable dewar" 0.1   	Cryo-HeVol:D357:VolLHe_Lt    17.73	   1.013   2}
+{Cryo-HeVol D841   "D841 portable dewar" 0.1   	Cryo-HeVol:D841:VolLHe_Lt    17.73	   1.013   2}
+{Cryo-HeVol D590   "D590 portable dewar" 1.0  	Cryo-HeVol:D590:VolLHe_Lt    17.73	   1.013   0}
 }

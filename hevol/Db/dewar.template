@@ -71,11 +71,11 @@ record (calc, "$(P):$(DEV):GHe-dens") {
   field(EGU, "kg/m³")
   field(PREC, "3")
   field(SCAN, "10 second")
-  field(INPA, "0")
-  field(INPB, "0")
-  field(INPC, "0")
+  field(INPA, "-2.2106")
+  field(INPB, "21.1043")
+  field(INPC, "-2.2211")
+  field(INPJ, "")
   field(INPK, "$(PT)")
   field(INPL, "$(PERC)")
-  field(CALC, "2.44*K")
+  field(CALC, "A*K*K+B*K+C")
 }
-
